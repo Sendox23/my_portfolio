@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import classes from "./DropDownNav.module.css";
 
 const DropDownNav = () => {
@@ -18,11 +19,11 @@ const DropDownNav = () => {
       </div>
       {isDropdownOpen ? (
         <div  className={classes.dropDownNavBox}>
-          <a href="/my-work">Work</a>
+          <Link to="/my-work">Work</Link>
 
-          <a href="/about-me">About Me</a>
+          <Link to="/about-me">About Me</Link>
 
-          <a href="/contact-me">Contact Me</a>
+          <Link to="/contact-me">Contact Me</Link>
         </div>
       ) : (
         ""

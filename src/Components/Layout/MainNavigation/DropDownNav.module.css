@@ -18,7 +18,7 @@
     top: 7%;
     z-index: 10;
   }
-  .dropDownNavBox a {
+  .dropDownNavBox Link {
     padding: 1rem;
     font-size: 2rem;
     color: black;
@@ -28,7 +28,7 @@
     background-image: radial-gradient(white, var(--gold));
     text-align: center;
   }
-  .dropDownNavBox a:active {
+  .dropDownNavBox Link:active {
     background-image: radial-gradient(black 30%, white);
     color:white;
   }

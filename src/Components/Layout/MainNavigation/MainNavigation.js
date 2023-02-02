@@ -1,6 +1,7 @@
 import classes from "./MainNavigation.module.css";
 import logo from "../../../resources/logo.png";
 import DropDownNav from "./DropDownNav";
+import { Link } from "react-router-dom";
 const MainNavigation = () => {
   return (
     <div className={classes.navigation}>
@@ -12,19 +13,19 @@ const MainNavigation = () => {
             </a>
           </div>
           <div className="col-sm-3">
-            <a className={classes.link} href="/my-work">
+            <Link className={classes.link} to="/my-work">
               My Work
-            </a>
+            </Link>
           </div>
           <div className="col-sm-3">
-            <a className={classes.link} href="/about-me">
+            <Link className={classes.link} to="/about-me">
               About Me
-            </a>
+            </Link>
           </div>
           <div className="col-sm-3">
-            <a className={classes.link} href="/contact-me">
+            <Link className={classes.link} to="/contact-me">
               Contact Me
-            </a>
+            </Link>
           </div>
         </div>
       </div>
