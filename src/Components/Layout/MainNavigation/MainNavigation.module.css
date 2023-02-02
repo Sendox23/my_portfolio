@@ -1,0 +1,42 @@
+.navigation {
+  height: auto;
+  padding: 2rem 0;
+}
+
+.logo {
+  min-width: 3rem;
+  max-width: 5rem;
+  background-image: radial-gradient(white, var(--gold));
+  border-radius: 100%;
+  margin-left: 3rem;
+
+}
+
+.link {
+  font-size: 2rem;
+
+  text-decoration: none;
+  color: black;
+  background-image: radial-gradient(white, var(--gold));
+  border-radius: 7%;
+  padding: 0.3rem 1rem;
+  margin-top: 1rem;
+}
+.link:hover {
+  color: white;
+
+  background-image: radial-gradient(black, white);
+}
+
+.navigation i {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .link {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+  }
+}

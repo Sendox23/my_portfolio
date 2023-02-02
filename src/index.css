@@ -1,0 +1,29 @@
+:root {
+  --darkGreen: rgba(40, 71, 53, 1);
+  --gold: #645037;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(gray, black);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:  "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

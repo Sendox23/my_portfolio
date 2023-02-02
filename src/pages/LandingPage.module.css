@@ -1,0 +1,76 @@
+h1 {
+  color: black;
+  font-size: 6rem;
+  animation: glow 3s infinite;
+  position: fixed;
+  left: 20%;
+  right: 0;
+  top: 40%;
+}
+
+.nameBanner {
+  margin-top: 10%;
+  margin-left: 20%;
+  color: black
+}
+.nameBanner h2 span {
+  padding: 10px;
+
+  box-sizing: border-box;
+
+  border-radius: 7%;
+
+  background-image: radial-gradient(white, var(--gold));
+  font-size: 4rem;
+}
+
+.nameBanner span:hover {
+  color: white;
+  background-image: radial-gradient(black 30%, white);
+
+  z-index: -10;
+}
+.aaron::before {
+  content: "A.";
+  display: inline-block;
+}
+
+.aaron:hover::before {
+  content: "Aaron";
+}
+.nameBanner a {
+  text-decoration: none;
+  color: black;
+}
+.david-link {
+  display: inline-block;
+  pointer-events: none;
+}
+.david::before {
+  content: "David";
+}
+.david:hover::before {
+  content: "About Me";
+}
+
+
+.marshall-link {
+  display: inline-block;
+}
+ .marshall::before{
+  content: "Marshall";
+ }
+.marshall:hover::before {
+  content: "My Work";
+}
+
+@media screen and (max-width: 960px) {
+  .nameBanner {
+    margin: 20% 0 0;
+    font-size: 3rem;
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: 30%;
+  }
+}

@@ -1,0 +1,27 @@
+.footer {
+  position: fixed;
+  width: auto;
+  bottom: 0;
+  left: 10%;
+  background-image: radial-gradient(white, var(--gold));
+  border-radius: 7%;
+}
+
+.footer i {
+  font-size: 2rem;
+  text-shadow: 0.5px 0.5px white;
+}
+.linkedin {
+  color: #0e76a8;
+}
+.github {
+  color: #171515;
+}
+.twitter {
+  color: #00acee;
+}
+
+.footer i:hover {
+  color: white;
+  text-shadow: 2px 2px black;
+}
