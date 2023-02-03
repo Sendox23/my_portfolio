@@ -8,9 +8,9 @@ const MainNavigation = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-3">
-            <a href="/home">
+            <Link to="/home">
               <img className={classes.logo} src={logo} alt="logo" />
-            </a>
+            </Link>
           </div>
           <div className="col-sm-3">
             <Link className={classes.link} to="/my-work">
