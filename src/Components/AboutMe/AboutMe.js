@@ -6,8 +6,8 @@ const AboutMe = () => {
     <div className={classes.aboutMe}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-lg-4"></div>
-          <div className="col-lg-4">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">
             <h2>About</h2>
             <p>
               As a front-end web developer, I am dedicated to creating visually
@@ -33,9 +33,9 @@ const AboutMe = () => {
               to deliver results that meet your needs and exceed your
               expectations.
             </p>
-            <a href={resume}>My resume (pdf)</a>
+            <a className={classes.resume} href={resume}>My resume (pdf)</a>
           </div>
-          <div className="col-lg-4"></div>
+          <div className="col-lg-3"></div>
         </div>
       </div>
     </div>

@@ -14,12 +14,14 @@
     position: fixed;
     display: inline-flex;
     flex-direction: column;
-    right: 7%;
-    top: 7%;
+    right: 20%;
+    top: 3%;
     z-index: 10;
+
   }
-  .dropDownNavBox Link {
-    padding: 1rem;
+  .dropDownNavBox a {
+    margin-top: .5rem;
+    padding: .5rem;
     font-size: 2rem;
     color: black;
     text-decoration: none;
@@ -28,7 +30,7 @@
     background-image: radial-gradient(white, var(--gold));
     text-align: center;
   }
-  .dropDownNavBox Link:active {
+  .dropDownNavBox a:active {
     background-image: radial-gradient(black 30%, white);
     color:white;
   }

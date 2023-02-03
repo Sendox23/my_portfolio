@@ -2,6 +2,7 @@
   font-family: "Semibold";
   text-align: center;
   padding: 5%;
+  opacity: 0.85;
 }
 
 .aboutMe h2 {
@@ -16,10 +17,14 @@
 }
 
 .aboutMe p {
-    opacity: .8;
-    padding: 1.5rem 1rem;
+  opacity: 0.8;
+  padding: 1.5rem 1rem;
   font-size: 20px;
   color: white;
   background-color: black;
-  box-shadow: .5rem .5rem var(--gold);
+}
+.resume {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--salmon);
 }

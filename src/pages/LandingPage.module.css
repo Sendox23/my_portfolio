@@ -6,22 +6,22 @@ h1 {
   left: 20%;
   right: 0;
   top: 40%;
+  font-family: "Semibold";
 }
 
 .nameBanner {
   margin-top: 10%;
   margin-left: 20%;
-  color: black
+  color: black;
 }
 .nameBanner h2 span {
-  padding: 10px;
-
+  padding: .8rem;
   box-sizing: border-box;
-
+line-height: 10rem;
   border-radius: 7%;
-
+  font-family: "Semibold";
   background-image: radial-gradient(white, var(--gold));
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .nameBanner span:hover {
@@ -53,13 +53,12 @@ h1 {
   content: "About Me";
 }
 
-
 .marshall-link {
   display: inline-block;
 }
- .marshall::before{
+.marshall::before {
   content: "Marshall";
- }
+}
 .marshall:hover::before {
   content: "My Work";
 }

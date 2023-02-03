@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import classes from "./ContactMeForm.module.css";
+
 const ContactMeForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +23,11 @@ const ContactMeForm = () => {
   };
 
   return (
-
+    <div class={classes.contactMeForm}>
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-lg-3"></div>
+          <div className="col-lg-6">  <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">
@@ -63,8 +69,12 @@ const ContactMeForm = () => {
           </label>
         </div>
         <button type="submit">Submit</button>
-      </form>
-
+      </form></div>
+          <div className="col-lg-3"></div>
+        </div>
+      </div>
+    
+    </div>
   );
 };
 
