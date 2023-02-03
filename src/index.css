@@ -1,12 +1,15 @@
 :root {
   --salmon: rgb(250, 67, 67);
   --gold: #645037;
+  --dark-gray: #181818;
+  --purple: white;
 }
 
 * {
   box-sizing: border-box;
 }
-body,html {
+body,
+html {
   font-family: "Semibold";
 }
 body {
@@ -15,7 +18,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: radial-gradient(gray, black);
+  background-image: url(resources/background1.avif);
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Semibold" "Helvetica Neue";

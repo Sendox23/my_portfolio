@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import BackgroundPhoto from "../Components/BackgroundPhoto/BackgroundPhoto";
+
+// import BackgroundPhoto from "../Components/BackgroundPhoto/BackgroundPhoto";
 import classes from "./LandingPage.module.css";
 
 const LandingPage = () => {
@@ -11,18 +11,14 @@ const LandingPage = () => {
         </h2>
 
         <h2>
-          <Link className="david-link" to="/about-me">
-            <span className={classes.david}></span>
-          </Link>
+          <span className={classes.david}>David</span>
         </h2>
 
         <h2>
-          <Link className="marshall-link" to="/my-work">
-            <span className={classes.marshall}></span>
-          </Link>
+          <span className={classes.marshall}>Marshall</span>
         </h2>
       </div>
-      <BackgroundPhoto />
+      {/* <BackgroundPhoto /> */}
     </div>
   );
 };

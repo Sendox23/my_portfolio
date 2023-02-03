@@ -1,5 +1,5 @@
 import MainNavigation from "./MainNavigation/MainNavigation";
-import Footer from "./Footer";
+// import Footer from "./Footer";
 import classes from "./Layout.module.css";
 const Layout = (props) => {
   return (
@@ -8,7 +8,7 @@ const Layout = (props) => {
 
       <main>{props.children}</main>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
