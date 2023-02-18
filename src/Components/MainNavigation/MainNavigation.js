@@ -1,5 +1,5 @@
 import classes from "./MainNavigation.module.css";
-import logo from "../../../resources/logo.png";
+import logo from "../../resources/logo.png";
 
 import { NavLink } from "react-router-dom";
 const MainNavigation = () => {

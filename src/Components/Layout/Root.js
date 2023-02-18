@@ -1,4 +1,4 @@
-import MainNavigation from "./MainNavigation/MainNavigation";
+import MainNavigation from "../MainNavigation/MainNavigation";
 // import Footer from "./Footer";
 import classes from "./Layout.module.css";
 import { Outlet, useNavigation } from "react-router-dom";

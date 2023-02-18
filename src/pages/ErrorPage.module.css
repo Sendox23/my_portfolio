@@ -3,3 +3,9 @@
   margin-top: 15%;
   text-align: center;
 }
+
+.error h3 {
+  color: white;
+  margin-top: 3%;
+  text-align: center;
+}
