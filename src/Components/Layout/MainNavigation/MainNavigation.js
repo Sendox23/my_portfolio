@@ -37,7 +37,6 @@ const MainNavigation = () => {
       >
         About Me
       </NavLink>
-
       <NavLink
         className={({ isActive }) =>
           isActive ? classes.activeLink : classes.link
@@ -84,7 +83,6 @@ const MainNavigation = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };

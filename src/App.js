@@ -8,6 +8,7 @@ import ContactMePage from "./pages/ContactMePage";
 import LandingPage from "./pages/LandingPage";
 import WorkPage from "./pages/WorkPage";
 
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,7 +16,6 @@ const App = () => {
         <Suspense fallback={<LoadingSpinner />}>
           <Routes>
             <Route path="/home" element={<LandingPage />} />
-
             <Route path="/my-work" element={<WorkPage />} />
             <Route path="/about-me" element={<AboutMePage />} />
             <Route path="/contact-me" element={<ContactMePage />} />

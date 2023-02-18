@@ -1,6 +1,6 @@
 .nameBanner {
-  margin-top: 10%;
-  margin-left: 20%;
+  margin-top: 15%;
+  text-align: center;
 }
 .nameBanner h2 span {
   padding: 0.8rem;
@@ -8,8 +8,8 @@
   line-height: 10rem;
   border-radius: 7%;
   font-family: "Semibold";
-color: var(--gold);
-text-shadow: 3px 3px white;
+  color: var(--gold);
+  text-shadow: 3px 3px white;
   font-size: 6rem;
 }
 
@@ -25,11 +25,22 @@ text-shadow: 3px 3px white;
   color: white;
 }
 
+.selfImage img {
+  width: 300px;
+  height: auto;
+  max-height: 100%;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  position: absolute;
+  padding: 1rem 1rem 0 1rem;
+  right: 5%;
+  top: 5%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 @media screen and (max-width: 960px) {
   .nameBanner {
-    margin: 5% 0 0 0;
+    margin: 15% 0 0 0;
 
     font-size: 3rem;
-    text-align: center;
   }
 }

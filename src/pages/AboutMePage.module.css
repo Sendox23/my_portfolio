@@ -1,17 +1,16 @@
 .aboutMe {
   font-family: "Semibold";
   text-align: center;
-  padding: 5%;
-  opacity: 0.85;
+
+  margin: 3rem auto;
+  width: 60%;
 }
 
 .aboutMe h2 {
   padding: 10px;
   color: black;
   box-sizing: border-box;
-
   border-radius: 7%;
-
   background-image: radial-gradient(white, var(--gold));
   font-size: 4rem;
 }

@@ -8,22 +8,23 @@
   width: fit-content;
   background-color: var(--dark-gray);
   text-align: center;
-  border-right: 1px solid white;
 }
+
 .logoBox {
-  height: fit-content;
-  padding: 2rem 0 3rem 0;
-
-  border-radius: 60%;
-
-  border-bottom: 3px solid var(--purple);
+  margin: 1rem 2rem;
+  padding: 1rem;
+  background-color: var(--gold);
+  border-radius: 50%;
+  border: 1px solid var(--gold);
 }
+
 .logo {
   min-width: 3rem;
   max-width: 5rem;
   background-image: radial-gradient(white, var(--gold));
   border-radius: 100%;
 }
+
 .dividerTop {
   background-color: var(--gold);
   height: 0.3rem;
@@ -33,6 +34,7 @@
   margin-right: auto;
   margin-bottom: 5rem;
 }
+
 .dividerBottom {
   background-color: var(--gold);
   height: 0.3rem;
@@ -68,12 +70,7 @@
 }
 
 .emblemsBox {
-  height: fit-content;
-  padding: 4rem 0 1rem 0;
-
-  border-radius: 50%;
-
-  border-top: 3px solid var(--purple);
+  margin-bottom: 1rem;
 }
 .linkedin {
   color: #0e76a8;
@@ -86,11 +83,14 @@
   text-shadow: 0.5px 0.5px white;
 }
 
-.navigation i:hover {
+.linkedin:hover {
   color: white;
   text-shadow: 2px 2px black;
 }
-
+.github:hover {
+  color: #6e5494;
+  text-shadow: 2px 2px black;
+}
 @media screen and (max-width: 960px) {
   .link {
     display: none;

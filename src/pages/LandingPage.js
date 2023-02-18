@@ -1,7 +1,5 @@
-
-// import BackgroundPhoto from "../Components/BackgroundPhoto/BackgroundPhoto";
 import classes from "./LandingPage.module.css";
-
+import selfie from "../resources/SelfPhotoBaWTransparent.png";
 const LandingPage = () => {
   return (
     <div className={classes.landingPage}>
@@ -18,7 +16,9 @@ const LandingPage = () => {
           <span className={classes.marshall}>Marshall</span>
         </h2>
       </div>
-      {/* <BackgroundPhoto /> */}
+      <div className={classes.selfImage}>
+        <img className="img-fluid" src={selfie} alt="A. David Marshall" />
+      </div>
     </div>
   );
 };
