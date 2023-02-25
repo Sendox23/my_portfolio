@@ -5,16 +5,24 @@ import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    if (window.innerWidth >= 800) {
-      setIsNavOpen(true);
-    }
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const toggleNavMenuHandler = () => {
     setIsNavOpen(!isNavOpen);
   };
+
 
   return (
     <Fragment>
@@ -105,7 +113,7 @@ const MainNavigation = () => {
           </div>
         </div>
       </nav>
-      {window.innerWidth < 800 && (
+      {windowWidth < 800 && (
         <button className={classes.navToggle} onClick={toggleNavMenuHandler}>
           ☰
         </button>
