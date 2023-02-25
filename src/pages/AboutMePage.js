@@ -1,4 +1,5 @@
 import classes from "./AboutMePage.module.css";
+
 const AboutMePage = () => {
   return (
     <div className={classes.aboutMe}>

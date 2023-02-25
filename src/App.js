@@ -4,7 +4,7 @@ import ErrorPage from "./pages/ErrorPage";
 
 import AboutMePage from "./pages/AboutMePage";
 import ContactMePage from "./pages/ContactMePage";
-import LandingPage from "./pages/LandingPage";
+import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
 import ProjectPage from "./pages/ProjectPage";
 import ProjectDetailsPage from "./pages/ProjectDetailsPage";
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: "/", element: <LandingPage /> },
-      { path: "home", element: <LandingPage /> },
+      { path: "/", element: <HomePage /> },
+      { path: "home", element: <HomePage /> },
       {
         path: "my-work",
         element: <WorkPage />,

@@ -23,7 +23,7 @@ const ContactMeForm = () => {
   };
 
   return (
-    <div class={classes.contactMeForm}>
+    <div className={classes.contactMeForm}>
       <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
         <div>
