@@ -1,5 +1,5 @@
 import classes from "./HomePage.module.css";
-import selfie from "../resources/SelfPhotoBaWTransparent.png";
+import selfie from "../../resources/SelfPhotoBaWTransparent.png";
 const LandingPage = () => {
   return (
     <div className={classes.landingPage}>

@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import { useRouteError } from "react-router-dom";
-import MainNavigation from "../Components/MainNavigation/MainNavigation";
+import MainNavigation from "../../components/MainNavigation/MainNavigation";
 import classes from "./ErrorPage.module.css";
 
 const ErrorPage = () => {

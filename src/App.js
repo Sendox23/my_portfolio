@@ -1,13 +1,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import RootLayout from "./Components/Layout/Root";
-import ErrorPage from "./pages/ErrorPage";
+import RootLayout from "./components/Layout/Root";
+import ErrorPage from "./pages/Error/ErrorPage";
 
-import AboutMePage from "./pages/AboutMePage";
-import ContactMePage from "./pages/ContactMePage";
-import HomePage from "./pages/HomePage";
-import WorkPage from "./pages/WorkPage";
-import ProjectPage from "./pages/ProjectPage";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage";
+import AboutMePage from "./pages/AboutMe/AboutMePage";
+import ContactMePage from "./pages/ContactMe/ContactMePage";
+import HomePage from "./pages/Home/HomePage";
+import WorkPage from "./pages/MyWork/WorkPage";
+import ProjectPage from "./pages/Projects/ProjectPage";
+import ProjectDetailsPage from "./pages/Projects/ProjectDetailsPage";
+import MySkillsPage from "./pages/MySkills/MySkillsPage";
+import ResumePage from "./pages/Resume/ResumePage";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,8 @@ const router = createBrowserRouter([
       },
       { path: "about-me", element: <AboutMePage /> },
       { path: "contact-me", element: <ContactMePage /> },
+      { path: "my-skills", element: <MySkillsPage /> },
+      { path: "resume", element: <ResumePage /> },
     ],
   },
 ]);

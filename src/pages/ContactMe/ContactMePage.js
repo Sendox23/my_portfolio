@@ -1,4 +1,4 @@
-import ContactMeForm from "../Components/ContactMe/ContactMeForm"
+import ContactMeForm from "../../components/ContactMe/ContactMeForm"
 
 const ContactMePage = () => {
     return (<ContactMeForm />)

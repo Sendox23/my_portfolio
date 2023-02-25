@@ -14,15 +14,28 @@ const MainNavigation = () => {
 
     window.addEventListener("resize", handleResize);
 
+    if (window.innerWidth >= 800) {
+      setIsNavOpen(true);
+    } else {
+      setIsNavOpen(false);
+    }
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
+  useEffect(() => {
+    if (windowWidth >= 800) {
+      setIsNavOpen(true);
+    } else {
+      setIsNavOpen(false);
+    }
+  }, [windowWidth]);
+
   const toggleNavMenuHandler = () => {
     setIsNavOpen(!isNavOpen);
   };
-
 
   return (
     <Fragment>
