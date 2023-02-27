@@ -2,7 +2,7 @@ import classes from "./HomePage.module.css";
 import selfie from "../../resources/SelfPhotoBaWTransparent.png";
 const HomePage = () => {
   return (
-    <sec className={classes.homePage}>
+    <div className={classes.homePage}>
       <div className={classes.selfImage}>
         <img className="img-fluid" src={selfie} alt="A. David Marshall" />
       </div>
@@ -20,7 +20,7 @@ const HomePage = () => {
           <span className={classes.marshall}>Marshall</span>
         </h2>
       </div>
-    </sec>
+    </div>
   );
 };
 
