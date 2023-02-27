@@ -11,6 +11,7 @@ nav {
   z-index: 999;
   border-right: 3px solid var(--gold);
   transition: transform 0.3s ease-in-out;
+  overflow: scroll;
 }
 
 .navToggle {
