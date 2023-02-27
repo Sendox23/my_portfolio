@@ -1,6 +1,5 @@
 .contactMeForm {
   align-items: center;
-  width: 60%;
 }
 
 .contactMeForm h2 {
@@ -49,9 +48,3 @@
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 800px) {
-  .contactMeForm {
-    width: 90%;
-
-  }
-}

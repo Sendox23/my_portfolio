@@ -1,3 +1,10 @@
 .contactMePage {
-    margin: 3rem 0 0 27% ;
+  margin: 3rem 0 0 27%;
+}
+
+@media screen and (max-width: 800px) {
+  .contactMePage {
+    width: 90%;
+    margin: 3rem auto;
+  }
 }
