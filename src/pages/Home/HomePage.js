@@ -9,7 +9,7 @@ const HomePage = () => {
       <div className={classes.nameBanner}>
         <h2>
           {/* See CSS for .aaron input */}
-          <span className={classes.aaron}></span> 
+          <span className={classes.aaron}></span>
         </h2>
 
         <h2>
