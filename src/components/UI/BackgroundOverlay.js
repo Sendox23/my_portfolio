@@ -1,4 +1,6 @@
-const BackgroundOverlay = (props) => {
-  <div className={classes.backgroundOverlay}>{props.children}</div>;
+import classes from './BackgroundOverlay.module.css'
+
+const BackgroundOverlay = () => {
+  <div className={classes.backgroundOverlay}></div>;
 };
 export default BackgroundOverlay;

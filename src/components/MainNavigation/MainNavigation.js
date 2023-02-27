@@ -3,6 +3,7 @@ import { Fragment, useState, useEffect } from "react";
 import logo from "../../resources/logo.png";
 import classes from "./MainNavigation.module.css";
 import NavFooter from "./NavFooter";
+import BackgroundOverlay from "../UI/BackgroundOverlay";
 
 const MainNavigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,12 +15,6 @@ const MainNavigation = () => {
     };
 
     window.addEventListener("resize", handleResize);
-
-    if (window.innerWidth >= 800) {
-      setIsNavOpen(true);
-    } else {
-      setIsNavOpen(false);
-    }
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -97,6 +92,9 @@ const MainNavigation = () => {
         <hr className={classes.dividerBottom} />
         <NavFooter />
       </nav>
+      {isNavOpen && windowWidth < 800 && (
+        <BackgroundOverlay onClick={toggleNavMenuHandler} />
+      )}
       {windowWidth < 800 && (
         <button className={classes.navToggle} onClick={toggleNavMenuHandler}>
           ☰
