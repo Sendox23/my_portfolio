@@ -16,6 +16,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
+    
     children: [
       { path: "/", element: <HomePage /> },
       { path: "home", element: <HomePage /> },
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
 
     ],
   },
+  
 ]);
 
 const App = () => {
