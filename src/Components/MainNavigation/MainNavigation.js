@@ -2,6 +2,7 @@ import { NavLink } from "react-router-dom";
 import { Fragment, useState, useEffect } from "react";
 import logo from "../../resources/logo.png";
 import classes from "./MainNavigation.module.css";
+import NavFooter from "./NavFooter";
 
 const MainNavigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -93,38 +94,8 @@ const MainNavigation = () => {
         >
           Contact Me
         </NavLink>
-
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/resume"
-        >
-          Resume
-        </NavLink>
         <hr className={classes.dividerBottom} />
-        <div className={classes.emblemsBox}>
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-6">
-                <a
-                  className={classes.linkedin}
-                  href="https://www.linkedin.com/in/a-david-marshall-2b4b191b9/"
-                >
-                  <i className="fa fa-linkedin fa-xl"></i>
-                </a>
-              </div>
-              <div className="col-6">
-                <a
-                  className={classes.github}
-                  href="https://github.com/Sendox23"
-                >
-                  <i className="fa fa-github fa-xl"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <NavFooter />
       </nav>
       {windowWidth < 800 && (
         <button className={classes.navToggle} onClick={toggleNavMenuHandler}>

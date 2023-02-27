@@ -1,11 +1,12 @@
-.aboutMe {
+.mySkills {
   font-family: "Semibold";
-  text-align: center;
+
   margin: 3rem auto;
   width: 60%;
 }
 
-.aboutMe h2 {
+.mySkills h2 {
+  text-align: center;
   padding: 10px;
   color: black;
   box-sizing: border-box;
@@ -13,18 +14,20 @@
   font-size: 4rem;
   border: 3px solid black;
 }
-
-.aboutMe p {
+.mySkillsList {
   white-space: inherit;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 3rem;
   font-size: 20px;
   color: white;
   background-color: var(--dark-gray);
   border: 3px solid var(--gold);
 }
 
+.mySkills li {
+  padding-left: 1rem;
+}
 @media screen and (max-width: 800px) {
-  .aboutMe {
+  .mySkills {
     width: 95%;
 
   }

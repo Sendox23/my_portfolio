@@ -9,7 +9,7 @@ import WorkPage from "./pages/MyWork/WorkPage";
 import ProjectPage from "./pages/Projects/ProjectPage";
 import ProjectDetailsPage from "./pages/Projects/ProjectDetailsPage";
 import MySkillsPage from "./pages/MySkills/MySkillsPage";
-import ResumePage from "./pages/Resume/ResumePage";
+
 
 const router = createBrowserRouter([
   {
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       { path: "about-me", element: <AboutMePage /> },
       { path: "contact-me", element: <ContactMePage /> },
       { path: "my-skills", element: <MySkillsPage /> },
-      { path: "resume", element: <ResumePage /> },
+
     ],
   },
 ]);

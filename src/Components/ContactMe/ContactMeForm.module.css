@@ -2,15 +2,15 @@
   align-items: center;
   margin: 3rem auto;
   width: 60%;
-
 }
+
 .contactMeForm h2 {
   padding: 10px;
   color: black;
   box-sizing: border-box;
-  border-radius: 7%;
   background-image: radial-gradient(white, var(--gold));
   font-size: 4rem;
+  border: 3px solid black;
   text-align: center;
 }
 .contactMeForm form {
@@ -50,9 +50,9 @@
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 800px) {
   .contactMeForm {
     width: 90%;
-    margin-top: 7%;
+
   }
 }

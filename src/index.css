@@ -21,6 +21,7 @@ body {
   background-image: url(resources/background1.avif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   font-family: "Semibold" "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -1,15 +1,15 @@
 import classes from "./HomePage.module.css";
 import selfie from "../../resources/SelfPhotoBaWTransparent.png";
-const LandingPage = () => {
+const HomePage = () => {
   return (
-    <div className={classes.landingPage}>
-      {" "}
+    <sec className={classes.homePage}>
       <div className={classes.selfImage}>
         <img className="img-fluid" src={selfie} alt="A. David Marshall" />
       </div>
       <div className={classes.nameBanner}>
         <h2>
-          <span className={classes.aaron}></span>
+          {/* See CSS for .aaron input */}
+          <span className={classes.aaron}></span> 
         </h2>
 
         <h2>
@@ -20,8 +20,8 @@ const LandingPage = () => {
           <span className={classes.marshall}>Marshall</span>
         </h2>
       </div>
-    </div>
+    </sec>
   );
 };
 
-export default LandingPage;
+export default HomePage;
