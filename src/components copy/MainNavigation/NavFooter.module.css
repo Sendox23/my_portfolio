@@ -1,0 +1,25 @@
+.emblemsBox {
+  margin-bottom: 1rem;
+}
+
+.linkedin {
+  color: #0e76a8;
+  font-size: 1rem;
+  text-shadow: 0.5px 0.5px white;
+}
+
+.github {
+  font-size: 1rem;
+  color: white;
+  text-shadow: 0.5px 0.5px white;
+}
+
+.linkedin:hover {
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+.github:hover {
+  color: #6e5494;
+  text-shadow: 2px 2px black;
+}
