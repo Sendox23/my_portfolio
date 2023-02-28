@@ -1,4 +1,6 @@
+import Projects from "../../components/MyWork/Projects"
+
 const WorkPage = () => {
-    return (<div></div>)
+    return <Projects />
 }
 export default WorkPage

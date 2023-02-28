@@ -6,9 +6,9 @@ import AboutMePage from "./pages/AboutMe/AboutMePage";
 import ContactMePage from "./pages/ContactMe/ContactMePage";
 import HomePage from "./pages/Home/HomePage";
 import WorkPage from "./pages/MyWork/WorkPage";
-import ProjectPage from "./pages/Projects/ProjectPage";
-import ProjectDetailsPage from "./pages/Projects/ProjectDetailsPage";
+
 import MySkillsPage from "./pages/MySkills/MySkillsPage";
+import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
 
 
 const router = createBrowserRouter([
@@ -25,9 +25,9 @@ const router = createBrowserRouter([
         element: <WorkPage />,
         children: [
           {
-            path: ":projectId",
-            element: <ProjectPage />,
-            children: [{ path: "details", element: <ProjectDetailsPage /> }],
+            path: ":workDetails",
+            element: <WorkDetailsPage/>,
+           
           },
         ],
       },
