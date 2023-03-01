@@ -2,9 +2,19 @@ import reactMeetup from "../../resources/react-meetups-project.png";
 import reactMeetup2 from "../../resources/react-meetups-project-2.png";
 
 import classes from "./Projects.module.css";
-
+import { useState } from "react";
 
 const Projects = () => {
+  const [modalImage, setModalImage] = useState(null);
+
+  const openModal = (image) => {
+    setModalImage(image);
+  };
+
+  const closeModal = () => {
+    setModalImage(null);
+  };
+
   const PROJECT_LIST = [
     {
       name: "Spotify Playlist",
@@ -41,6 +51,7 @@ const Projects = () => {
               key={imgIndex}
               src={image}
               alt={`${project.name} ${imgIndex}`}
+              onClick={() => openModal(image)}
             />
           ))}
         </div>
@@ -50,8 +61,13 @@ const Projects = () => {
 
   return (
     <div className={classes.myWork}>
-        <h2>My Work</h2>
+      <h2>My Work</h2>
       <ul>{mappedList}</ul>
+      {modalImage && (
+        <div className={classes.modal} onClick={closeModal}>
+          <img src={modalImage} alt="full-screen" />
+        </div>
+      )}
     </div>
   );
 };
