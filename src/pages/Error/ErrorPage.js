@@ -14,7 +14,7 @@ const ErrorPage = () => {
   }
 
   if (error.status === 404) {
-    title = "Not Found!";
+    title = "Page Not Found!";
     message = "Could not find resource or page.";
   }
   return (
@@ -22,7 +22,7 @@ const ErrorPage = () => {
       <MainNavigation />
       <div className={classes.error}>
         <h3>{title}</h3>
-        <p>{message}</p>
+        <h4>{message}</h4>
       </div>
     </Fragment>
   );

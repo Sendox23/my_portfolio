@@ -1,7 +1,8 @@
-
-
-.error h3 {
+.error h3,
+h4 {
   color: white;
-  margin-top: 3%;
+
   text-align: center;
+  font-family: "Semibold";
+  margin: 6rem 0  ;
 }

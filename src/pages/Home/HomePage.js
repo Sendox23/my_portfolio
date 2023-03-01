@@ -19,6 +19,7 @@ const HomePage = () => {
         <h3>
           <span className={classes.marshall}>Marshall</span>
         </h3>
+        <h4>Front-End Web Developer</h4>
       </div>
     </div>
   );

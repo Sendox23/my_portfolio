@@ -1,7 +1,7 @@
 .aboutMe {
   font-family: "Semibold";
   text-align: center;
-  margin: 3rem 0 0 27% ;
+  margin: 6rem 0 0 27%;
   width: 60%;
 }
 
@@ -19,6 +19,6 @@
 @media screen and (max-width: 800px) {
   .aboutMe {
     width: 95%;
-    margin: 3rem auto;
+    margin: 6rem auto;
   }
 }

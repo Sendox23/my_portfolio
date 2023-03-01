@@ -13,6 +13,14 @@
   font-size: 6rem;
 }
 
+.nameBanner h4 {
+  color: white;
+  font-size: 2rem;
+  padding: 0;
+  margin-top: 5rem;
+  text-shadow: 1px 1px var(--gold);
+}
+
 .aaron::before {
   content: "A.";
   display: inline-block;
@@ -46,9 +54,10 @@
   .selfImage img {
     position: relative;
     right: 0;
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
-  .nameBanner {
-    margin-top: 0
+
+  .nameBanner span {
+    line-height: 7rem;
   }
 }
