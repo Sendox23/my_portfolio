@@ -14,7 +14,21 @@ const Projects = () => {
   const closeModal = () => {
     setModalImage(null);
   };
-
+  const scrollLeft = (e, carousel) => {
+    e.stopPropagation();
+    carousel.scrollBy({
+      left: -carousel.offsetWidth,
+      behavior: "smooth",
+    });
+  };
+  
+  const scrollRight = (e, carousel) => {
+    e.stopPropagation();
+    carousel.scrollBy({
+      left: carousel.offsetWidth,
+      behavior: "smooth",
+    });
+  };
   const PROJECT_LIST = [
     {
       name: "Spotify Playlist",
@@ -22,6 +36,7 @@ const Projects = () => {
       description: "",
       img: [],
       gitLink: "",
+      websiteLink: "",
     },
     {
       name: "Fantasy Football",
@@ -29,8 +44,16 @@ const Projects = () => {
       description: "",
       img: [],
       gitLink: "",
+      websiteLink: "",
     },
-    { name: "Food Order App", id: "p3", description: "", img: [], gitLink: "" },
+    {
+      name: "Food Order App",
+      id: "p3",
+      description: "",
+      img: [],
+      gitLink: "",
+      websiteLink: "",
+    },
     {
       name: "React Meetups",
       id: "p4",
@@ -45,15 +68,41 @@ const Projects = () => {
       <li id={project.id} key={index}>
         <h3>{project.name}</h3>
         <p>{project.description}</p>
-        <div className={classes.carousel}>
-          {project.img.map((image, imgIndex) => (
-            <img
-              key={imgIndex}
-              src={image}
-              alt={`${project.name} ${imgIndex}`}
-              onClick={() => openModal(image)}
-            />
-          ))}
+        <div className={classes.projectLinks}>
+          {project.gitLink && (
+            <a href={project.gitLink} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          )}
+          {project.websiteLink && (
+            <a href={project.websiteLink} target="_blank" rel="noreferrer">
+              Link
+            </a>
+          )}
+        </div>
+        <div className={classes.carouselContainer}>
+          <button
+            className={`${classes.carouselButton} ${classes.carouselButtonLeft}`}
+            onClick={(e) => scrollLeft(e, e.target.parentNode.querySelector(`.${classes.carousel}`))}
+          >
+            &#8249;
+          </button>
+          <div className={classes.carousel}>
+            {project.img.map((image, imgIndex) => (
+              <img
+                key={imgIndex}
+                src={image}
+                alt={`${project.name} ${imgIndex}`}
+                onClick={() => openModal(image)}
+              />
+            ))}
+          </div>
+          <button
+            className={`${classes.carouselButton} ${classes.carouselButtonRight}`}
+            onClick={(e) => scrollRight(e, e.target.parentNode.querySelector(`.${classes.carousel}`))}
+          >
+            &#8250;
+          </button>
         </div>
       </li>
     );

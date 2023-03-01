@@ -8,6 +8,9 @@
 .myWork ul {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 0.3rem;
 }
 .myWork li {
   padding: 1.5rem 1rem;
@@ -16,34 +19,59 @@
   background-color: var(--dark-gray);
   border: 3px solid var(--gold);
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 }
+.projectLinks {
+  margin-bottom: 1rem;
+}
+.projectLinks a {
+  margin: 0 1rem;
+}
+.carouselContainer {
+  position: relative; 
+
+}
+
 .carousel {
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
-    touch-action: pan-y;
-}
-
+    padding-bottom: 1rem;
+    margin: 0 3rem;
+  }
 .carousel::-webkit-scrollbar {
-  height: 0.5rem;
+  display: none; /* Chrome, Safari, and Opera */
 }
-
-.carousel::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.carousel::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 1rem;
-}
-
 .carousel img {
-    margin-right: 1rem;
-    max-width: 95%;
-    height: auto;
-    scroll-snap-align: start;
+  margin-bottom: 0.3rem;
+  margin-right: 1rem;
+  max-width: 95%;
+  height: auto;
+  scroll-snap-align: center;
+}
+
+.carouselButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carouselButtonLeft {
+  left: 0;
+}
+
+.carouselButtonRight {
+  right: 0;
 }
 .modal {
   position: fixed;
@@ -65,39 +93,16 @@
   object-fit: contain;
 }
 .closeButton {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    font-size: 1.5rem;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .myWork .buttons {
-    margin-top: 0.5rem;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .myWork .buttonLeft,
-  .myWork .buttonRight {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-  }
-  
-  .myWork .buttonLeft {
-    margin-right: 0.5rem;
-  }
-  
-  .myWork .buttonRight:disabled,
-  .myWork .buttonLeft:disabled {
-    color: grey;
-    cursor: default;
-  }
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   .myWork {
     width: 95%;
@@ -105,6 +110,5 @@
   }
   .carousel img {
     max-width: 90%;
-
   }
 }
