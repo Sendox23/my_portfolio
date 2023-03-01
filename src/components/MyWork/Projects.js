@@ -65,6 +65,9 @@ const Projects = () => {
       <ul>{mappedList}</ul>
       {modalImage && (
         <div className={classes.modal} onClick={closeModal}>
+          <button className={classes.closeButton} onClick={closeModal}>
+            X
+          </button>
           <img src={modalImage} alt="full-screen" />
         </div>
       )}

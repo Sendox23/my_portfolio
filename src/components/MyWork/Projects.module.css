@@ -57,8 +57,19 @@
 .modal img {
   max-width: 100%;
   max-height: 100%;
+  padding: 3%;
   object-fit: contain;
 }
+.closeButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 
 @media screen and (max-width: 800px) {
   .myWork {
@@ -67,5 +78,6 @@
   }
   .carousel img {
     max-width: 90%;
+
   }
 }
