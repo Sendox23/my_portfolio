@@ -1,0 +1,57 @@
+.myWork {
+    font-family: "Semibold";
+    text-align: center;
+    margin: 3rem 0 0 27%;
+    width: 60%;
+  }
+  
+  .myWork h2 {
+    padding: 10px;
+    color: black;
+    box-sizing: border-box;
+    background-image: radial-gradient(white, var(--gold));
+    font-size: 4rem;
+    border: 3px solid black;
+  }
+  
+  .myWork li {
+    white-space: inherit;
+    padding: 1.5rem 1rem;
+    font-size: 20px;
+    color: white;
+    background-color: var(--dark-gray);
+    border: 3px solid var(--gold);
+    list-style: none;
+  }
+  .carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  
+  .carousel::-webkit-scrollbar {
+    height: 0.5rem;
+  }
+  
+  .carousel::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .carousel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 1rem;
+  }
+  
+  .carousel img {
+    margin-right: 1rem;
+    max-width: 95%;
+    height: auto;
+  }
+
+  @media screen and (max-width: 800px) {
+    .myWork {
+      width: 95%;
+      margin: 3rem auto;
+    }
+  }
+  
