@@ -7,18 +7,18 @@ const HomePage = () => {
         <img className="img-fluid" src={selfie} alt="A. David Marshall" />
       </div>
       <div className={classes.nameBanner}>
-        <h2>
+        <h3>
           {/* See CSS for .aaron input */}
           <span className={classes.aaron}></span>
-        </h2>
+        </h3>
 
-        <h2>
+        <h3>
           <span className={classes.david}>David</span>
-        </h2>
+        </h3>
 
-        <h2>
+        <h3>
           <span className={classes.marshall}>Marshall</span>
-        </h2>
+        </h3>
       </div>
     </div>
   );

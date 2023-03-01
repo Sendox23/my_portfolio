@@ -50,6 +50,7 @@ const Projects = () => {
 
   return (
     <div className={classes.myWork}>
+        <h2>My Work</h2>
       <ul>{mappedList}</ul>
     </div>
   );

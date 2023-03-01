@@ -5,14 +5,7 @@
   width: 60%;
 }
 
-.aboutMe h2 {
-  padding: 10px;
-  color: black;
-  box-sizing: border-box;
-  background-image: radial-gradient(white, var(--gold));
-  font-size: 4rem;
-  border: 3px solid black;
-}
+
 
 .aboutMe p {
   white-space: inherit;

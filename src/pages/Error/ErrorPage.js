@@ -21,8 +21,8 @@ const ErrorPage = () => {
     <Fragment>
       <MainNavigation />
       <div className={classes.error}>
-        <h2>{title}</h2>
-        <h3>{message}</h3>
+        <h3>{title}</h3>
+        <p>{message}</p>
       </div>
     </Fragment>
   );
