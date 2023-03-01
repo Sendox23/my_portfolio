@@ -10,13 +10,12 @@ import WorkPage from "./pages/MyWork/WorkPage";
 import MySkillsPage from "./pages/MySkills/MySkillsPage";
 import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
 
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     errorElement: <ErrorPage />,
-    
+
     children: [
       { path: "/", element: <HomePage /> },
       { path: "home", element: <HomePage /> },
@@ -26,18 +25,15 @@ const router = createBrowserRouter([
         children: [
           {
             path: ":workDetails",
-            element: <WorkDetailsPage/>,
-           
+            element: <WorkDetailsPage />,
           },
         ],
       },
       { path: "about-me", element: <AboutMePage /> },
       { path: "contact-me", element: <ContactMePage /> },
       { path: "my-skills", element: <MySkillsPage /> },
-
     ],
   },
-  
 ]);
 
 const App = () => {

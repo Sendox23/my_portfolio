@@ -1,14 +1,11 @@
 .aboutMe {
   font-family: "Semibold";
+  margin: 6rem 0 0 25%;
   text-align: center;
-  margin: 6rem 0 0 27%;
   width: 60%;
 }
 
-
-
 .aboutMe p {
-  white-space: inherit;
   padding: 1.5rem 1rem;
   font-size: 20px;
   color: white;

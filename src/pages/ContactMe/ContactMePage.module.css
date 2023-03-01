@@ -1,8 +1,8 @@
 .contactMePage {
-  text-align: center;
-  margin: 6rem 0 0 27% ;
-  width: 60%;
   font-family: "Semibold";
+  margin: 6rem 0 0 25%;
+  text-align: center;
+  width: 60%;
 }
 
 @media screen and (max-width: 800px) {

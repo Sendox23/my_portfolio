@@ -1,35 +1,29 @@
 :root {
-  --salmon: rgb(250, 67, 67);
+
   --gold: #645037;
   --dark-gray: #181818;
-  --purple: white;
+
 }
 
 * {
   box-sizing: border-box;
-}
-body,
-html {
-  font-family: "Semibold";
-}
-body {
-  display: block;
-  min-height: 100vh;
-  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  min-height: 100vh;
   background-image: url(resources/background1.avif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-family: "Semibold" "Helvetica Neue";
+  font-family: "Semibold", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Courier New", monospace;
 }
 
 h2 {
