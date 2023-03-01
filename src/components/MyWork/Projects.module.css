@@ -18,9 +18,12 @@
   list-style: none;
 }
 .carousel {
-  display: flex;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
 }
 
 .carousel::-webkit-scrollbar {
@@ -37,9 +40,10 @@
 }
 
 .carousel img {
-  margin-right: 1rem;
-  max-width: 95%;
-  height: auto;
+    margin-right: 1rem;
+    max-width: 95%;
+    height: auto;
+    scroll-snap-align: start;
 }
 .modal {
   position: fixed;
@@ -70,7 +74,30 @@
     border: none;
     cursor: pointer;
   }
-
+  .myWork .buttons {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .myWork .buttonLeft,
+  .myWork .buttonRight {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .myWork .buttonLeft {
+    margin-right: 0.5rem;
+  }
+  
+  .myWork .buttonRight:disabled,
+  .myWork .buttonLeft:disabled {
+    color: grey;
+    cursor: default;
+  }
 @media screen and (max-width: 800px) {
   .myWork {
     width: 95%;
