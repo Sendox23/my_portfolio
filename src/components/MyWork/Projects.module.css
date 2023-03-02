@@ -1,4 +1,3 @@
-
 .myProjects ul {
   margin: 0;
   padding: 0;
@@ -6,6 +5,7 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 0.3rem;
 }
+
 .myProjects li {
   padding: 1.5rem 1rem;
   font-size: 1.25rem;
@@ -19,17 +19,25 @@
   justify-content: center;
   margin: 0;
 }
+
+
+
 .projectLinks {
   margin-bottom: 1rem;
 }
 .projectLinks a {
   margin: 0 1rem;
-  color: rgb(241, 240, 151)
+  color: rgb(241, 240, 151);
 }
-
+.showMoreButton,
+.showLessButton {
+  border: none;
+  background: none;
+  color: rgb(241, 240, 151);
+  font-size: 1rem;
+}
 @media screen and (max-width: 800px) {
   .myProjects ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
-

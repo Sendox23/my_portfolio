@@ -35,3 +35,9 @@ h2 {
   border: 3px solid black;
   text-align: center;
 }
+
+h3{
+  font-weight: 700;
+  color: white;
+  text-shadow: 1.5px 1.5px var(--gold);
+}

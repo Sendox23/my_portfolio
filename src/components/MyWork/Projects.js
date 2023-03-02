@@ -6,6 +6,7 @@ import classes from "./Projects.module.css";
 import ImageCarousel from "./ImageCarousel";
 const Projects = () => {
   const [modalImage, setModalImage] = useState(null);
+  const [showFullDescription, setShowFullDescription] = useState(false);
 
   const openModal = (image) => {
     setModalImage(image);
@@ -16,6 +17,24 @@ const Projects = () => {
   };
 
   const mappedList = projectList.map((project) => {
+
+    let description = project.description;
+    let readMoreButton = null;
+    let showLessButton = null;
+  
+    if (description.length > 150 && !showFullDescription) {
+      description = description.substring(0, 150);
+      readMoreButton = (
+        <button className={classes.showMoreButton} onClick={() => setShowFullDescription(true)}>...Read More</button>
+      );
+    } else if (description.length > 150 && showFullDescription) {
+
+      description = project.description;
+      showLessButton = (
+        <button className={classes.showLessButton} onClick={() => setShowFullDescription(false)}>Read Less</button>
+      );
+    }
+  
     return (
       <li id={project.id} key={project.id}>
         <h3>{project.name}</h3>
@@ -35,8 +54,12 @@ const Projects = () => {
           name={project.name}
           images={project.images}
           openModal={openModal}
-        />{" "}
-        <p>{project.description}</p>
+        />
+        <p>
+          {description}
+        
+        </p>  {readMoreButton}
+          {showLessButton}
       </li>
     );
   });
