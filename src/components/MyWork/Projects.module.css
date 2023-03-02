@@ -7,8 +7,8 @@
   grid-gap: 0.3rem;
 }
 .myProjects li {
-    padding: 1.5rem 1rem;
-    font-size: 1.25rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.25rem;
   color: white;
   background-color: var(--dark-gray);
   border: 3px solid var(--gold);
@@ -24,13 +24,11 @@
 }
 .projectLinks a {
   margin: 0 1rem;
+  color: rgb(241, 240, 151)
 }
 
-
 @media screen and (max-width: 800px) {
-  .myProjects {
-    width: 95%;
-    margin: 6rem auto;
+  .myProjects ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
-
 }

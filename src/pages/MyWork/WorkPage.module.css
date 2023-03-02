@@ -3,5 +3,12 @@
     font-family: "Semibold";
     margin: 6rem 0 0 25%;
     text-align: center;
-    width: 60%;
+width: 70%;
+  }
+
+  @media screen and (max-width: 800px) {
+    .workPage {
+      width: 95%;
+      margin: 6rem auto;
+    }
   }

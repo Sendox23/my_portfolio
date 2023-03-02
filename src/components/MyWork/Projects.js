@@ -15,21 +15,7 @@ const Projects = () => {
     setModalImage(null);
   };
 
-  const scrollLeft = (e, carousel) => {
-    e.stopPropagation();
-    carousel.scrollBy({
-      left: -carousel.offsetWidth,
-      behavior: "smooth",
-    });
-  };
 
-  const scrollRight = (e, carousel) => {
-    e.stopPropagation();
-    carousel.scrollBy({
-      left: carousel.offsetWidth,
-      behavior: "smooth",
-    });
-  };
 
   const mappedList = projectList.map((project) => {
     return (
@@ -52,8 +38,7 @@ const Projects = () => {
           name={project.name}
           img={project.img}
           openModal={openModal}
-          scrollLeft={scrollLeft}
-          scrollRight={scrollRight}
+
         />
       </li>
     );
@@ -63,7 +48,7 @@ const Projects = () => {
     <div className={classes.myProjects}>
       <ul>{mappedList}</ul>
       {modalImage && (
-        <ModalImage modalImage={modalImage} closeModal={closeModal} />
+        <ModalImage modalImage={modalImage} closeModal={closeModal}  />
       )}
     </div>
   );

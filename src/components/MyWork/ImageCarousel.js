@@ -1,43 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ImageCarousel.module.css";
+import CarouselButton from "./CarouselButton";
 
-const ImageCarousel = ({ name, img, openModal, scrollLeft, scrollRight }) => {
+const ImageCarousel = ({ name, img, openModal }) => {
+  const [imgIndex, setImgIndex] = useState(0);
+
+  const scrollLeft = () => {
+    setImgIndex((prevIndex) => prevIndex - 1);
+  };
+
+  const scrollRight = () => {
+    setImgIndex((prevIndex) => prevIndex + 1);
+  };
+
   return (
     <div className={classes.carouselContainer}>
-      <button
-        className={`${classes.carouselButton} ${classes.carouselButtonLeft}`}
-        onClick={(e) =>
-          scrollLeft(
-            e,
-            e.target.parentNode.querySelector(`.${classes.carousel}`)
-          )
-        }
-      >
-        &#8249;
-      </button>
+      {imgIndex > 0 && (
+        <CarouselButton
+          direction="left"
+          onClick={scrollLeft}
+        />
+      )}
       <div className={classes.carousel}>
-        {img.map((image, imgIndex) => (
+        {img.map((image, index) => (
           <img
-            key={imgIndex}
+            key={index}
             src={image}
-            alt={`${name} ${imgIndex}`}
+            alt={`${name} ${index}`}
             onClick={() => openModal(image)}
+            style={{ display: index === imgIndex ? "flex" : "none" }}
           />
         ))}
       </div>
-      <button
-        className={`${classes.carouselButton} ${classes.carouselButtonRight}`}
-        onClick={(e) =>
-          scrollRight(
-            e,
-            e.target.parentNode.querySelector(`.${classes.carousel}`)
-          )
-        }
-      >
-        &#8250;
-      </button>
+      {imgIndex < img.length - 1 && (
+        <CarouselButton
+          direction="right"
+          onClick={scrollRight}
+        />
+      )}
     </div>
   );
 };
 
 export default ImageCarousel;
+
+
+
