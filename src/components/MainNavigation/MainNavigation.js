@@ -1,37 +1,36 @@
 import { NavLink } from "react-router-dom";
-import { Fragment, useState, useEffect } from "react";
-import logo from "../../resources/logo.png";
-import classes from "./MainNavigation.module.css";
+import { Fragment, useState, useEffect, useCallback } from "react";
 import NavFooter from "./NavFooter";
 import BackgroundOverlay from "../UI/BackgroundOverlay";
+import logo from "../../resources/logo.png";
+import classes from "./MainNavigation.module.css";
 
 const MainNavigation = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  const handleResize = useCallback(() => {
+    setWindowWidth(window.innerWidth);
+  }, []);
+
+  const toggleNavMenuHandler = useCallback(() => {
+    setIsNavOpen((prevIsNavOpen) => !prevIsNavOpen);
+  }, []);
+
+  const activeClassHandler = ({ isActive }) => {
+    return isActive ? classes.activeLink : classes.link;
+  };
+
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
     window.addEventListener("resize", handleResize);
-
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [handleResize]);
 
   useEffect(() => {
-    if (windowWidth >= 800) {
-      setIsNavOpen(true);
-    } else {
-      setIsNavOpen(false);
-    }
+    setIsNavOpen(windowWidth >= 800);
   }, [windowWidth]);
-
-  const toggleNavMenuHandler = () => {
-    setIsNavOpen(!isNavOpen);
-  };
 
   return (
     <Fragment>
@@ -46,47 +45,22 @@ const MainNavigation = () => {
           </div>
         </NavLink>
         <hr className={classes.dividerTop} />
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/home"
-        >
+        <NavLink className={activeClassHandler} to="/home">
           Home
         </NavLink>
 
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/my-work"
-        >
+        <NavLink className={activeClassHandler} to="/my-work">
           My Work
         </NavLink>
 
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/about-me"
-        >
+        <NavLink className={activeClassHandler} to="/about-me">
           About Me
         </NavLink>
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/my-skills"
-        >
+        <NavLink className={activeClassHandler} to="/my-skills">
           My Skills
         </NavLink>
 
-        <NavLink
-          className={({ isActive }) =>
-            isActive ? classes.activeLink : classes.link
-          }
-          to="/contact-me"
-        >
+        <NavLink className={activeClassHandler} to="/contact-me">
           Contact Me
         </NavLink>
         <hr className={classes.dividerBottom} />
@@ -97,7 +71,7 @@ const MainNavigation = () => {
       )}
       {windowWidth < 800 && (
         <button className={classes.navToggle} onClick={toggleNavMenuHandler}>
-          ☰
+          &#9776;
         </button>
       )}
     </Fragment>

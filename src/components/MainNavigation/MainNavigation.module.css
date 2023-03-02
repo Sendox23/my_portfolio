@@ -12,8 +12,8 @@ nav {
   border-right: 3px solid var(--gold);
   transition: transform 0.3s ease-in-out;
   overflow: scroll;
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 nav::-webkit-scrollbar {
   display: none;
@@ -21,17 +21,18 @@ nav::-webkit-scrollbar {
 
 .navToggle {
   position: fixed;
+  border: none;
   background: none;
+  color: white;
   right: 1rem;
   top: 1rem;
-  color: white;
-  font-size: 1.5rem;
+
+  font-size: 2rem;
   z-index: 999;
 }
 
 .logoBox {
   margin: 2rem 0;
-
 }
 
 .logo {
@@ -59,7 +60,6 @@ nav::-webkit-scrollbar {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-
 }
 
 .link {

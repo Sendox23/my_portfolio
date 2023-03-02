@@ -2,27 +2,30 @@ import React, { useState } from "react";
 import classes from "./ImageCarousel.module.css";
 import CarouselButton from "./CarouselButton";
 
-const ImageCarousel = ({ name, img, openModal }) => {
+const ImageCarousel = ({ name, images, openModal }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
   const scrollLeft = () => {
-    setImgIndex((prevIndex) => prevIndex - 1);
+    if (imgIndex === 0) {
+      setImgIndex((prevIndex) => prevIndex + images.length - 1);
+    } else {
+      setImgIndex((prevIndex) => prevIndex - 1);
+    }
   };
 
   const scrollRight = () => {
-    setImgIndex((prevIndex) => prevIndex + 1);
+    if (imgIndex === images.length - 1) {
+      setImgIndex(0);
+    } else {
+      setImgIndex((prevIndex) => prevIndex + 1);
+    }
   };
-
+  console.log(imgIndex);
   return (
     <div className={classes.carouselContainer}>
-      {imgIndex > 0 && (
-        <CarouselButton
-          direction="left"
-          onClick={scrollLeft}
-        />
-      )}
+      <CarouselButton direction="left" onClick={scrollLeft} />
       <div className={classes.carousel}>
-        {img.map((image, index) => (
+        {images.map((image, index) => (
           <img
             key={index}
             src={image}
@@ -32,17 +35,10 @@ const ImageCarousel = ({ name, img, openModal }) => {
           />
         ))}
       </div>
-      {imgIndex < img.length - 1 && (
-        <CarouselButton
-          direction="right"
-          onClick={scrollRight}
-        />
-      )}
+
+      <CarouselButton direction="right" onClick={scrollRight} />
     </div>
   );
 };
 
 export default ImageCarousel;
-
-
-

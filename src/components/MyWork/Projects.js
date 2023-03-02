@@ -15,13 +15,10 @@ const Projects = () => {
     setModalImage(null);
   };
 
-
-
   const mappedList = projectList.map((project) => {
     return (
       <li id={project.id} key={project.id}>
         <h3>{project.name}</h3>
-        <p>{project.description}</p>
         <div className={classes.projectLinks}>
           {project.gitLink && (
             <a href={project.gitLink} target="_blank" rel="noreferrer">
@@ -36,10 +33,10 @@ const Projects = () => {
         </div>
         <ImageCarousel
           name={project.name}
-          img={project.img}
+          images={project.images}
           openModal={openModal}
-
-        />
+        />{" "}
+        <p>{project.description}</p>
       </li>
     );
   });
@@ -48,7 +45,7 @@ const Projects = () => {
     <div className={classes.myProjects}>
       <ul>{mappedList}</ul>
       {modalImage && (
-        <ModalImage modalImage={modalImage} closeModal={closeModal}  />
+        <ModalImage modalImage={modalImage} closeModal={closeModal} />
       )}
     </div>
   );
