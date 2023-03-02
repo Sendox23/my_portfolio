@@ -9,6 +9,8 @@ const NavFooter = () => {
           <a
             className={classes.linkedin}
             href="https://www.linkedin.com/in/a-david-marshall-2b4b191b9/"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fa fa-linkedin fa-xl"></i>
           </a>
@@ -17,6 +19,8 @@ const NavFooter = () => {
           <a
             className={classes.github}
             href="https://github.com/Sendox23"
+            target="_blank"
+            rel="noreferrer"
           >
             <i className="fa fa-github fa-xl"></i>
           </a>

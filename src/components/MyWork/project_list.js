@@ -1,13 +1,16 @@
 import reactMeetup from "../../resources/react-meetups-project.png";
 import reactMeetup2 from "../../resources/react-meetups-project-2.png";
-
+import spotifyPlaylist from "../../resources/jamming-project.png";
+import spotifyPlaylist2 from "../../resources/jamming-project-2.png";
+import spotifyPlaylist3 from "../../resources/jamming-project-3.png";
+import spotifyPlaylist4 from "../../resources/jamming-project-4.png";
 export const projectList = [
     {
       name: "Spotify Playlist",
       id: "p1",
       description: "",
-      img: [],
-      gitLink: "",
+      img: [spotifyPlaylist,spotifyPlaylist2,spotifyPlaylist3,spotifyPlaylist4,],
+      gitLink: "https://github.com/Sendox23/Spotify-app",
       websiteLink: "",
     },
     {
