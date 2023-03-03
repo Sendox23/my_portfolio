@@ -20,7 +20,9 @@ const MainNavigation = () => {
   const activeClassHandler = ({ isActive }) => {
     return isActive ? classes.activeLink : classes.link;
   };
-
+  const closeNavMenuHandler = () => {
+    windowWidth < 800 && setIsNavOpen(false);
+  };
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => {
@@ -39,28 +41,48 @@ const MainNavigation = () => {
           transform: isNavOpen ? "translateX(0)" : "translateX(-100%)",
         }}
       >
-        <NavLink to="/home">
+        <NavLink to="/home" onClick={closeNavMenuHandler}>
           <div className={classes.logoBox}>
             <img className={classes.logo} src={logo} alt="logo" />
           </div>
         </NavLink>
         <hr className={classes.dividerTop} />
-        <NavLink className={activeClassHandler} to="/home">
+        <NavLink
+          className={activeClassHandler}
+          to="/home"
+          onClick={closeNavMenuHandler}
+        >
           Home
         </NavLink>
 
-        <NavLink className={activeClassHandler} to="/my-work">
+        <NavLink
+          className={activeClassHandler}
+          to="/my-work"
+          onClick={closeNavMenuHandler}
+        >
           My Work
         </NavLink>
 
-        <NavLink className={activeClassHandler} to="/about-me">
+        <NavLink
+          className={activeClassHandler}
+          to="/about-me"
+          onClick={closeNavMenuHandler}
+        >
           About Me
         </NavLink>
-        <NavLink className={activeClassHandler} to="/my-skills">
+        <NavLink
+          className={activeClassHandler}
+          to="/my-skills"
+          onClick={closeNavMenuHandler}
+        >
           My Skills
         </NavLink>
 
-        <NavLink className={activeClassHandler} to="/contact-me">
+        <NavLink
+          className={activeClassHandler}
+          to="/contact-me"
+          onClick={closeNavMenuHandler}
+        >
           Contact Me
         </NavLink>
         <hr className={classes.dividerBottom} />

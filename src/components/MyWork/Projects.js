@@ -17,24 +17,32 @@ const Projects = () => {
   };
 
   const mappedList = projectList.map((project) => {
-
     let description = project.description;
     let readMoreButton = null;
     let showLessButton = null;
-  
+
     if (description.length > 150 && !showFullDescription) {
       description = description.substring(0, 150);
       readMoreButton = (
-        <button className={classes.showMoreButton} onClick={() => setShowFullDescription(true)}>...Read More</button>
+        <button
+          className={classes.showMoreButton}
+          onClick={() => setShowFullDescription(true)}
+        >
+          ...Read More
+        </button>
       );
     } else if (description.length > 150 && showFullDescription) {
-
       description = project.description;
       showLessButton = (
-        <button className={classes.showLessButton} onClick={() => setShowFullDescription(false)}>Read Less</button>
+        <button
+          className={classes.showLessButton}
+          onClick={() => setShowFullDescription(false)}
+        >
+          Read Less
+        </button>
       );
     }
-  
+
     return (
       <li id={project.id} key={project.id}>
         <h3>{project.name}</h3>
@@ -46,7 +54,7 @@ const Projects = () => {
           )}
           {project.websiteLink && (
             <a href={project.websiteLink} target="_blank" rel="noreferrer">
-              Link
+             Website
             </a>
           )}
         </div>
@@ -55,11 +63,8 @@ const Projects = () => {
           images={project.images}
           openModal={openModal}
         />
-        <p>
-          {description}
-        
-        </p>  {readMoreButton}
-          {showLessButton}
+        <p>{description}</p> {readMoreButton}
+        {showLessButton}
       </li>
     );
   });
