@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import classes from "./AboutMePage.module.css";
 
 const AboutMePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={classes.aboutMePage}>
       <h2>About</h2>

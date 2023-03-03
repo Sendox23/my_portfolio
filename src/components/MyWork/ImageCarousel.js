@@ -11,6 +11,7 @@ const ImageCarousel = ({ name, images, openModal }) => {
     } else {
       setImgIndex((prevIndex) => prevIndex - 1);
     }
+
   };
 
   const scrollRight = () => {
@@ -19,6 +20,7 @@ const ImageCarousel = ({ name, images, openModal }) => {
     } else {
       setImgIndex((prevIndex) => prevIndex + 1);
     }
+
   };
   console.log(images);
   return (

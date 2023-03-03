@@ -1,6 +1,13 @@
+import { useEffect } from "react";
+
 import classes from "./HomePage.module.css";
 import selfie from "../../resources/SelfPhotoBaWTransparent.png";
+
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className={classes.homePage}>
       <div className={classes.selfImage}>

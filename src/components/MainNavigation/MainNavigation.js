@@ -37,52 +37,30 @@ const MainNavigation = () => {
   return (
     <Fragment>
       <nav
+        onClick={closeNavMenuHandler}
         style={{
           transform: isNavOpen ? "translateX(0)" : "translateX(-100%)",
         }}
       >
-        <NavLink to="/home" onClick={closeNavMenuHandler}>
+        <NavLink to="/home">
           <div className={classes.logoBox}>
             <img className={classes.logo} src={logo} alt="logo" />
           </div>
         </NavLink>
         <hr className={classes.dividerTop} />
-        <NavLink
-          className={activeClassHandler}
-          to="/home"
-          onClick={closeNavMenuHandler}
-        >
+        <NavLink className={activeClassHandler} to="/home">
           Home
         </NavLink>
-
-        <NavLink
-          className={activeClassHandler}
-          to="/my-work"
-          onClick={closeNavMenuHandler}
-        >
+        <NavLink className={activeClassHandler} to="/my-work">
           My Work
         </NavLink>
-
-        <NavLink
-          className={activeClassHandler}
-          to="/about-me"
-          onClick={closeNavMenuHandler}
-        >
+        <NavLink className={activeClassHandler} to="/about-me">
           About Me
         </NavLink>
-        <NavLink
-          className={activeClassHandler}
-          to="/my-skills"
-          onClick={closeNavMenuHandler}
-        >
+        <NavLink className={activeClassHandler} to="/my-skills">
           My Skills
         </NavLink>
-
-        <NavLink
-          className={activeClassHandler}
-          to="/contact-me"
-          onClick={closeNavMenuHandler}
-        >
+        <NavLink className={activeClassHandler} to="/contact-me">
           Contact Me
         </NavLink>
         <hr className={classes.dividerBottom} />
