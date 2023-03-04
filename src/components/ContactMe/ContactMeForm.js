@@ -25,7 +25,7 @@ const ContactMeForm = () => {
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} name="contact" method="POST" data-netlifty="true" >
         <div>
           <label htmlFor="name">
             Name:

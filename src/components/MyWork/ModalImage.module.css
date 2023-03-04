@@ -20,7 +20,8 @@
   
   .closeButton {
       position: absolute;
-      inset: 0.5rem 1rem auto auto;
+
+      inset: 1rem 3rem auto auto;
       font-size: 1.5rem;
       background-color: transparent;
       color: white;
