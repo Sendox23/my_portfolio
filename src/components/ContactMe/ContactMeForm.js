@@ -10,8 +10,6 @@ const ContactMeForm = () => {
     message: "",
   });
 
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
   const handleChange = (event) => {
     setFormData({
       ...formData,
@@ -19,22 +17,34 @@ const ContactMeForm = () => {
     });
   };
 
+  function encode(data) {
+    return Object.keys(data)
+      .map(
+        (key) =>
+          encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+      )
+      .join("&");
+  }
+  
   const handleSubmit = (event) => {
     event.preventDefault();
-    // add your form submission logic here, for example, sending an HTTP request
-    console.log(formData);
-    setSubmitSuccess(true); // set submit success to true after form is submitted
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+        ...formData,
+      }),
+    })
+      .then(() => redirect("/home"))
+      .catch((error) => alert(error));
   };
-
-  if (submitSuccess) {
-     return redirect('/home')
-  }
 
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" netlify>
-        <input type="hidden" name="form-name" value="contact" />
+      <form onSubmit={handleSubmit} name="form-name" method="POST" data-netlifty="true" >
+      <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
             Name:
@@ -76,7 +86,11 @@ const ContactMeForm = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+
+
+
     </div>
+    
   );
 };
 
