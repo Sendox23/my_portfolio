@@ -60,9 +60,9 @@ const MainNavigation = () => {
         <NavLink className={activeClassHandler} to="/my-skills">
           My Skills
         </NavLink>
-        <NavLink className={activeClassHandler} to="/contact-me">
+        {/* <NavLink className={activeClassHandler} to="/contact-me">
           Contact Me
-        </NavLink>
+        </NavLink> */}
         <hr className={classes.dividerBottom} />
         <NavFooter />
       </nav>

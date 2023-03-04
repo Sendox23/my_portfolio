@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 import ContactMeForm from "../../components/ContactMe/ContactMeForm";
-import TestForm from "../../components/ContactMe/TestForm";
+
 import classes from "./ContactMePage.module.css";
 
 const ContactMePage = () => {
@@ -12,7 +12,7 @@ const ContactMePage = () => {
   return (
     <div className={classes.contactMePage}>
       <ContactMeForm />
-      <TestForm />
+
     </div>
   );
 };
