@@ -4,7 +4,7 @@ const ContactMeForm = () => {
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form name="contact" method="POST" data-netlify="true">
+      <form name="contact" method="POST" data-netlify="true" >
         <p>
           <label htmlFor="name">
             Name:
