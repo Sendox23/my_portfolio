@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { redirect } from "react-router-dom";
 
 import classes from "./ContactMeForm.module.css";
 
@@ -8,6 +9,8 @@ const ContactMeForm = () => {
     email: "",
     message: "",
   });
+
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
   const handleChange = (event) => {
     setFormData({
@@ -20,12 +23,18 @@ const ContactMeForm = () => {
     event.preventDefault();
     // add your form submission logic here, for example, sending an HTTP request
     console.log(formData);
+    setSubmitSuccess(true); // set submit success to true after form is submitted
   };
+
+  if (submitSuccess) {
+     return redirect('/home')
+  }
 
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit} name="contact" method="POST" data-netlifty="true" >
+      <form onSubmit={handleSubmit} name="contact" method="POST" data-netlify="true" netlify>
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
             Name:
