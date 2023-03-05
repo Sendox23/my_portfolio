@@ -3,7 +3,7 @@ import RootLayout from "./components/Layout/Root";
 import ErrorPage from "./pages/Error/ErrorPage";
 
 import AboutMePage from "./pages/AboutMe/AboutMePage";
-// import ContactMePage from "./pages/ContactMe/ContactMePage";
+import ContactMePage from "./pages/ContactMe/ContactMePage";
 import HomePage from "./pages/Home/HomePage";
 import WorkPage from "./pages/MyWork/WorkPage";
 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         ],
       },
       { path: "about-me", element: <AboutMePage /> },
-      // { path: "contact-me", element: <ContactMePage /> },
+      { path: "contact-me", element: <ContactMePage /> },
       { path: "my-skills", element: <MySkillsPage /> },
     ],
   },

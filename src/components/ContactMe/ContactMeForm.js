@@ -24,7 +24,8 @@ const ContactMeForm = () => {
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} name="contact" method="post">
+        <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
             Name:
