@@ -1,7 +1,7 @@
 import { Fragment } from "react";
-import MainNavigation from "../../Components/MainNavigation/MainNavigation";
+import MainNavigation from "../../components/MainNavigation/MainNavigation";
 
-import classes from "SuccessPage.module.css";
+import classes from "./SuccessPage.module.css";
 
 const SuccessPage = () => {
   return (

@@ -9,7 +9,7 @@ import WorkPage from "./pages/MyWork/WorkPage";
 
 import MySkillsPage from "./pages/MySkills/MySkillsPage";
 import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
-
+import SuccessPage from "./pages/ContactMe/SuccessPage";
 
 const router = createBrowserRouter([
   {
@@ -31,9 +31,12 @@ const router = createBrowserRouter([
         ],
       },
       { path: "about-me", element: <AboutMePage /> },
-      { path: "contact-me", element: <ContactMePage /> },
+      {
+        path: "contact-me",
+        element: <ContactMePage />,
+        children: [{ path: "success", element: <SuccessPage /> }],
+      },
       { path: "my-skills", element: <MySkillsPage /> },
-
     ],
   },
 ]);

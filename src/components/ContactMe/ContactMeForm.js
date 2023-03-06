@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import classes from "./ContactMeForm.module.css";
 
 const ContactMeForm = () => {
@@ -9,7 +8,6 @@ const ContactMeForm = () => {
     email: "",
     message: "",
   });
-  const [sttatus, setSttatus] = useState();
 
   const handleChange = (event) => {
     setFormData({
@@ -18,33 +16,10 @@ const ContactMeForm = () => {
     });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    const form = event.target;
-    const data = new FormData(form);
-    try {
-      const response = await fetch(form.action, {
-        method: form.method,
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
-      });
-      setSttatus("SUCCESS");
-    } catch (error) {
-      setSttatus("ERROR");
-    }
-  };
-
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form
-        data-netlify="true"
-        onSubmit={handleSubmit}
-        name="contact"
-        method="post"
-      >
+      <form data-netlify="true" name="contact" method="post" action="/contact-me/success">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
@@ -85,9 +60,7 @@ const ContactMeForm = () => {
             />
           </label>
         </div>
-        <button type="submit">Submit</button>{" "}
-        {sttatus === "SUCCESS" && <p>Thanks for your message!</p>}
-        {sttatus === "ERROR" && <p>Oops! There was a problem.</p>}
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
