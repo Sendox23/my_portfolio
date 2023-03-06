@@ -34,9 +34,9 @@ const router = createBrowserRouter([
       {
         path: "contact-me",
         element: <ContactMePage />,
-        children: [{ path: "success", element: <SuccessPage /> }],
       },
       { path: "my-skills", element: <MySkillsPage /> },
+      { path: "contact-me/success", element: <SuccessPage /> },
     ],
   },
 ]);
