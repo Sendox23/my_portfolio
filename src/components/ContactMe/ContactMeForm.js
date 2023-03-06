@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import classes from "./ContactMeForm.module.css";
 
 const ContactMeForm = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,14 +19,12 @@ const ContactMeForm = () => {
     });
   };
 
-  const handleSubmit = (event) => {
-    return redirect("/home");
-  };
+
 
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit} name="contact" method="post">
+      <form  name="contact" method="post" action="/home">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">

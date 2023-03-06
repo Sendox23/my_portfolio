@@ -1,0 +1,12 @@
+.carouselContainer {
+  max-width: 90%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+.carousel img {
+  max-height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border: 1px solid black;
+}

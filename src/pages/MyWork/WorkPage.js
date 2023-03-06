@@ -1,5 +1,6 @@
-import Projects from "../../components/MyWork/Projects";
 import { useEffect } from "react";
+import Projects from "../../components/MyWork/Projects";
+import { projectList } from "../../components/MyWork/project_list";
 import classes from "./WorkPage.module.css";
 
 const WorkPage = () => {
@@ -9,7 +10,8 @@ const WorkPage = () => {
 
   return (
     <div className={classes.workPage}>
-      <h2>My Work</h2> <Projects />
+      <h2>My Work</h2>
+      <Projects projectList={projectList} />
     </div>
   );
 };

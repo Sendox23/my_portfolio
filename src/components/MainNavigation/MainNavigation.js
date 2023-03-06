@@ -63,6 +63,7 @@ const MainNavigation = () => {
         <NavLink className={activeClassHandler} to="/contact-me">
           Contact Me
         </NavLink>
+
         <hr className={classes.dividerBottom} />
         <NavFooter />
       </nav>

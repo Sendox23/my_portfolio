@@ -1,23 +1,16 @@
 import { useState } from "react";
+import SlickCarousel from "./SlickCarousel";
+
 import { projectList } from "./project_list";
-import ModalImage from "./ModalImage";
 
 import classes from "./Projects.module.css";
-import ImageCarousel from "./ImageCarousel";
+
 const Projects = () => {
-  const [modalImage, setModalImage] = useState(null);
   const [showFullDescription, setShowFullDescription] = useState(false);
-
-  const openModal = (image) => {
-    setModalImage(image);
-  };
-
-  const closeModal = () => {
-    setModalImage(null);
-  };
 
   const mappedList = projectList.map((project) => {
     let description = project.description;
+    let images = project.images;
     let readMoreButton = null;
     let showLessButton = null;
 
@@ -44,7 +37,7 @@ const Projects = () => {
     }
 
     return (
-      <li id={project.id} key={project.id}>
+      <li className={classes.projectContainer} id={project.id} key={project.id}>
         <h3>{project.name}</h3>
         <div className={classes.projectLinks}>
           {project.gitLink && (
@@ -54,15 +47,11 @@ const Projects = () => {
           )}
           {project.websiteLink && (
             <a href={project.websiteLink} target="_blank" rel="noreferrer">
-             Website
+              Website
             </a>
           )}
         </div>
-        <ImageCarousel
-          name={project.name}
-          images={project.images}
-          openModal={openModal}
-        />
+        <SlickCarousel images={images} />
         <p>{description}</p> {readMoreButton}
         {showLessButton}
       </li>
@@ -72,9 +61,6 @@ const Projects = () => {
   return (
     <div className={classes.myProjects}>
       <ul>{mappedList}</ul>
-      {modalImage && (
-        <ModalImage modalImage={modalImage} closeModal={closeModal} />
-      )}
     </div>
   );
 };

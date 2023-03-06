@@ -13,10 +13,11 @@
 
 body {
   min-height: 100vh;
-  background-image: url(resources/background1.avif);
+  background-color: rgb(16, 26, 14);
+  /* background-image: url(resources/background1.avif);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
   font-family: "Semibold", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -41,3 +42,4 @@ h3{
   color: white;
   text-shadow: 1.5px 1.5px var(--gold);
 }
+

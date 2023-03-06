@@ -6,7 +6,7 @@
   grid-gap: 0.3rem;
 }
 
-.myProjects li {
+.projectContainer {  
   padding: 1.5rem 1rem;
   font-size: 1.25rem;
   color: white;
@@ -19,8 +19,6 @@
   justify-content: center;
   margin: 0;
 }
-
-
 
 .projectLinks {
   margin-bottom: 1rem;

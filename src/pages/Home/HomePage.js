@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import classes from "./HomePage.module.css";
 import selfie from "../../resources/SelfPhotoBaWTransparent.png";
 
+
 const HomePage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -28,6 +29,7 @@ const HomePage = () => {
         </h3>
         <h4>Front-End Web Developer</h4>
       </div>
+
     </div>
   );
 };
