@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 import classes from "./ContactMeForm.module.css";
 
 const ContactMeForm = () => {
-
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (event) => {
     setFormData({
@@ -19,12 +19,15 @@ const ContactMeForm = () => {
     });
   };
 
-
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/home')
+  };
 
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form  name="contact" method="post" action="/home">
+      <form onSubmit={handleSubmit} name="contact" method="post" action="/home">
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
