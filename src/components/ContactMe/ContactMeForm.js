@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import classes from "./ContactMeForm.module.css";
 
 const ContactMeForm = () => {
@@ -16,10 +16,30 @@ const ContactMeForm = () => {
     });
   };
 
+  let navigate = useNavigate();
+  const submitHandler = (e) => {
+    e.preventDefault();
+    let myForm = document.getElementById("contact-form");
+    let formData = new FormData(myForm);
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/follow-up"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form data-netlify="true" name="contact" method="post" action="/contact-me/success">
+      <form
+        onSubmit={submitHandler}
+        data-netlify="true"
+        name="contact"
+        method="post"
+        action="/contact-me/success"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
