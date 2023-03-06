@@ -19,14 +19,14 @@ const ContactMeForm = () => {
   let navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
-    let myForm = document.getElementById("contact-form");
+    let myForm = document.getElementById("contact");
     let formData = new FormData(myForm);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(() => navigate("/follow-up"))
+      .then(() => navigate("/contact-me/success"))
       .catch((error) => alert(error));
   };
 
@@ -38,7 +38,7 @@ const ContactMeForm = () => {
         data-netlify="true"
         name="contact"
         method="post"
-        action="/contact-me/success"
+    id="contact"
       >
         <input type="hidden" name="form-name" value="contact" />
         <div>
