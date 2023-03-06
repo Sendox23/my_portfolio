@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 
 import classes from "./ContactMeForm.module.css";
 
@@ -9,8 +9,7 @@ const ContactMeForm = () => {
     email: "",
     message: "",
   });
-
-  const navigate = useNavigate();
+  const [sttatus, setSttatus] = useState();
 
   const handleChange = (event) => {
     setFormData({
@@ -19,15 +18,33 @@ const ContactMeForm = () => {
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    navigate('/home')
+    const form = event.target;
+    const data = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      setSttatus("SUCCESS");
+    } catch (error) {
+      setSttatus("ERROR");
+    }
   };
 
   return (
     <div className={classes.contactMeForm}>
       <h2>Contact</h2>
-      <form onSubmit={handleSubmit} name="contact" method="post" action="/home">
+      <form
+        data-netlify="true"
+        onSubmit={handleSubmit}
+        name="contact"
+        method="post"
+      >
         <input type="hidden" name="form-name" value="contact" />
         <div>
           <label htmlFor="name">
@@ -68,7 +85,9 @@ const ContactMeForm = () => {
             />
           </label>
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Submit</button>{" "}
+        {sttatus === "SUCCESS" && <p>Thanks for your message!</p>}
+        {sttatus === "ERROR" && <p>Oops! There was a problem.</p>}
       </form>
     </div>
   );
