@@ -8,7 +8,6 @@
 
 .nameBanner {
   text-align: center;
-  margin: 2rem 0 3rem;
 }
 
 .nameBanner span {
@@ -44,7 +43,7 @@
 }
 
 .selfImage img {
-  width: 17.5rem;
+  width: 22.5rem;
   height: auto;
   max-height: 100%;
   border: 3px solid var(--gold);
@@ -58,21 +57,20 @@
     padding: 3rem 0.5rem 5rem;
     overflow: auto;
   }
-  
-  .nameBanner {
-    margin: 1rem 0 2rem;
-  }
 
   .selfImage {
     margin-bottom: 1.5rem;
   }
-
-  .nameBanner h4 {
-    font-size: 1.5rem;
+  .selfImage img {
+    width: 17.5rem;
   }
 
   .nameBanner span {
-    font-size: 3rem;
+    font-size: 4.5rem;
     line-height: 1.1;
+  }
+  .nameBanner h4 {
+    font-size: 1.5rem;
+    padding-top: 3.5rem;
   }
 }
