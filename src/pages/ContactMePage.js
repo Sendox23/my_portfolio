@@ -1,5 +1,5 @@
-import ContactMeForm from "../../components/ContactMe/ContactMeForm";
-import PageContent from "../../components/Layout/PageContent";
+import ContactMeForm from "../components/ContactMe/ContactMeForm";
+import PageContent from "../components/Layout/PageContent";
 
 const ContactMePage = () => {
   return (

@@ -1,5 +1,5 @@
-import AboutMe from "../../components/AboutMe/AboutMe";
-import PageContent from "../../components/Layout/PageContent";
+import AboutMe from "../components/AboutMe/AboutMe";
+import PageContent from "../components/Layout/PageContent";
 
 const AboutMePage = () => {
   return (

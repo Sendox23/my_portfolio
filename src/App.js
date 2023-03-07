@@ -1,16 +1,16 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootLayout from "./components/Layout/Root";
-import ErrorPage from "./pages/Error/ErrorPage";
+import ErrorPage from "./pages/ErrorPage";
 
-import AboutMePage from "./pages/AboutMe/AboutMePage";
-import ContactMePage from "./pages/ContactMe/ContactMePage";
-import HomePage from "./pages/Home/HomePage";
-import WorkPage from "./pages/MyWork/WorkPage";
+import AboutMePage from "./pages/AboutMePage";
+import ContactMePage from "./pages/ContactMePage";
+import HomePage from "./pages/HomePage";
+import WorkPage from "./pages/WorkPage";
 
-import MySkillsPage from "./pages/MySkills/MySkillsPage";
+import MySkillsPage from "./pages/MySkillsPage";
 // import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
-import SuccessPage from "./pages/ContactMe/SuccessPage";
-import WorkRoot from "./pages/MyWork/WorkRoot";
+import SuccessPage from "./pages/SuccessPage";
+import WorkRoot from "./pages/WorkRoot";
 
 const router = createBrowserRouter([
   {

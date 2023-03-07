@@ -1,5 +1,5 @@
-import MySkills from "../../components/MySkills/MySkills";
-import PageContent from "../../components/Layout/PageContent";
+import MySkills from "../components/MySkills/MySkills";
+import PageContent from "../components/Layout/PageContent";
 
 const MySkillsPage = () => {
   return (
