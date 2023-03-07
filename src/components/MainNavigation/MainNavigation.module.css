@@ -89,10 +89,8 @@ nav::-webkit-scrollbar {
 
 @media screen and (min-width: 800px) {
   nav {
-    min-width: fit-content;
-    width: 10%;
-
-
+    max-width: fit-content;
+    width: 20vw;
   }
   .navToggle {
     display: none;

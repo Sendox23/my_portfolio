@@ -1,18 +1,8 @@
-.aboutMePage {
-  font-family: "Semibold";
-  padding: 6rem 5% 0 15%;
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  height: fit-content;
-  max-height: 100vh;
-  overflow: scroll;
-}
-
 .aboutMe {
   padding: 1.5rem 1rem;
-  background: radial-gradient(ellipse at top, var(--dark-gray) 0%, #090a0f 100%);
+  background: radial-gradient(ellipse at top, var(--dark-gray) 45%, #090a0f 70%);
   border: 3px solid var(--gold);
+  text-align: center;
 }
 
 .aboutMe p {

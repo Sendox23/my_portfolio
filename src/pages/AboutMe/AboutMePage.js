@@ -6,7 +6,7 @@ const AboutMePage = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className={classes.aboutMePage}>
+    <div className='page'>
       <h2>About</h2>
       <div className={classes.aboutMe}>
         <h3>Hello,</h3>

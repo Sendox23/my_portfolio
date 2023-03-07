@@ -1,10 +1,15 @@
 
 .projectContainer {  
+
   padding: 1.5rem 1rem;
   font-size: 1.25rem;
   color: white;
-  background-color: var(--dark-gray);
-  border: 3px solid var(--gold);
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 45%,
+    #090a0f 70%
+  );
+  border: 2px solid var(--gold);
   list-style: none;
   display: flex;
   flex-direction: column;

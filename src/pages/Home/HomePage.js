@@ -10,7 +10,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className={classes.homePage}>
+    <div className='page'>
       <div className={classes.selfImage}>
         <img className="img-fluid" src={selfie} alt="A. David Marshall" />
       </div>
