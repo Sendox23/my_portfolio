@@ -54,7 +54,7 @@ h3 {
   max-height: 100vh;
   overflow: auto;
 }
-.page::-webkit-scrollbar {
+*::-webkit-scrollbar {
   display: none;
 }
 

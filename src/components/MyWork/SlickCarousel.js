@@ -6,7 +6,6 @@ const SlickCarousel = ({ images }) => {
     dots: true,
     appendDots: (dots) => (
       <div
-
         style={{
           background: "radial-gradient(white, var(--gold))",
           maxHeight: "2rem",
@@ -14,6 +13,9 @@ const SlickCarousel = ({ images }) => {
           bottom: "-.8rem", // add this to position the dot bar at the bottom of the carousel container
           left: "50%", // add this to center the dot bar horizontally
           transform: "translateX(-50%)", // add this to center the dot bar horizontally
+          borderLeft: "1px solid black",
+          borderRight: "1px solid black",
+          borderBottom: "1px solid black",
         }}
       >
         <ul

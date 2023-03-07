@@ -3,7 +3,11 @@
   font-size: 1.5rem;
   color: white;
   text-align: center;
-  background: radial-gradient(ellipse at top, var(--dark-gray) 45%, #090a0f 70%);
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 25%,
+    #090a0f 90%
+  );
   border: 3px solid var(--gold);
   max-width: 600px;
   margin: 0 auto;

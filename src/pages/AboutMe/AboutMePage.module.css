@@ -1,6 +1,10 @@
 .aboutMe {
   padding: 1.5rem 1rem;
-  background: radial-gradient(ellipse at top, var(--dark-gray) 45%, #090a0f 70%);
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 25%,
+    #090a0f 90%
+  );
   border: 3px solid var(--gold);
   text-align: center;
 }

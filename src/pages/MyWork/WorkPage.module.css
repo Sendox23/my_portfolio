@@ -1,29 +1,19 @@
-.workPage {
-  font-family: "Semibold";
-  padding: 6rem 5% 3rem 15%;
-  text-align: center;
-  width: 100%;
-  max-width: 100%;
-  height: fit-content;
-  max-height: 100vh;
-  overflow: scroll;
-}
 
-.workPage ul {
+
+
+.myWork ul {
+
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 0.3rem;
 }
 
+
 @media screen and (max-width: 800px) {
-  .workPage {
-    padding: 5rem 0.5rem 7rem 0.5rem;
-    margin: 0 auto;
-    overflow: scroll;
-  }
-  .workPage ul {
+
+  .myWork ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

@@ -1,13 +1,12 @@
 
 .projectContainer {  
-
   padding: 1.5rem 1rem;
   font-size: 1.25rem;
   color: white;
   background: radial-gradient(
     ellipse at top,
-    var(--dark-gray) 45%,
-    #090a0f 70%
+    var(--dark-gray) 25%,
+    #090a0f 90%
   );
   border: 2px solid var(--gold);
   list-style: none;
@@ -15,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 ;
 }
 
 .projectLinks {

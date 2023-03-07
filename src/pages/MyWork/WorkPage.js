@@ -9,23 +9,25 @@ const WorkPage = () => {
   }, []);
 
   return (
-    <div className={classes.workPage}>
-      <h2>My Work</h2>
-      <ul>
-        {projectList.map((project) => {
-          return (
-            <Projects
-              name={project.name}
-              key={project.id}
-              id={project.id}
-              description={project.description}
-              images={project.images}
-              gitLink={project.gitLink}
-              websiteLink={project.websiteLink}
-            />
-          );
-        })}
-      </ul>
+    <div className="page">
+      <div className={classes.myWork}>
+        <h2>My Work</h2>
+        <ul>
+          {projectList.map((project) => {
+            return (
+              <Projects
+                name={project.name}
+                key={project.id}
+                id={project.id}
+                description={project.description}
+                images={project.images}
+                gitLink={project.gitLink}
+                websiteLink={project.websiteLink}
+              />
+            );
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

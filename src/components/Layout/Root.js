@@ -13,6 +13,7 @@ const RootLayout = () => {
         {navigation.state === "loading" && <p>Loading.....</p>}
         <Outlet />
       </main>
+
     </div>
   );
 };
