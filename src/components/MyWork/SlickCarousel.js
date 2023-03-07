@@ -6,7 +6,7 @@ const SlickCarousel = ({ images }) => {
     dots: true,
     appendDots: (dots) => (
       <div
-        className={classes.dotBar}
+
         style={{
           background: "radial-gradient(white, var(--gold))",
           maxHeight: "2rem",
