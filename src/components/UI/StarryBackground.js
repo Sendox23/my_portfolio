@@ -1,5 +1,5 @@
 
-import "./background.css"
+import "./StarryBackground.css"
 
 const PixelBackground = (props) => {
   return (

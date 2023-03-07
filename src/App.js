@@ -8,8 +8,9 @@ import HomePage from "./pages/Home/HomePage";
 import WorkPage from "./pages/MyWork/WorkPage";
 
 import MySkillsPage from "./pages/MySkills/MySkillsPage";
-import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
+// import WorkDetailsPage from "./pages/MyWork/WorkDetailsPage";
 import SuccessPage from "./pages/ContactMe/SuccessPage";
+import WorkRoot from "./pages/MyWork/WorkRoot";
 
 const router = createBrowserRouter([
   {
@@ -22,14 +23,19 @@ const router = createBrowserRouter([
       { path: "home", element: <HomePage /> },
       {
         path: "my-work",
-        element: <WorkPage />,
+        element: <WorkRoot />,
         children: [
           {
-            path: ":workDetails",
-            element: <WorkDetailsPage />,
+            path: "",
+            element: <WorkPage />,
           },
+          // {
+          //   path: ":projectName",
+          //   element: <WorkDetailsPage />,
+          // },
         ],
       },
+
       { path: "about-me", element: <AboutMePage /> },
       {
         path: "contact-me",

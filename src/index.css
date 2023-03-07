@@ -1,15 +1,19 @@
+/* Define custom CSS variables */
 :root {
   --gold: #645037;
   --dark-gray: #202020;
   --ultra-dark-blue: #090a0f;
+  --light-yellow: rgb(241, 240, 151);
 }
 
+/* Set box-sizing and margin/padding to 0 for all elements */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Set font family and height to 100% for the HTML and body elements */
 html,
 body {
   height: 100vh;
@@ -17,36 +21,40 @@ body {
   font-family: "Semibold", "Helvetica Neue", sans-serif;
 }
 
+/* Set background color and other styles for the body element */
 body {
   overflow: hidden;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   min-height: 100%;
   height: 100%;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Set font family and other styles for code elements */
 code {
   font-family: "Courier New", monospace;
 }
 
-h2 {
+/* Set styles for the h1 element */
+h1 {
   padding: 10px;
   color: black;
   box-sizing: border-box;
   background-image: radial-gradient(white, var(--gold));
   font-size: 4rem;
-  border: 3px solid black;
   text-align: center;
 }
 
+/* Set styles for the h3 element */
 h3 {
   font-weight: 700;
   color: white;
   text-shadow: 1.5px 1.5px var(--gold);
 }
-.page {
+
+/* Set styles for the .page class */
+/* .page {
   font-family: "Semibold";
   padding: 5vh 0 5vh 17vh;
   margin: 0 auto;
@@ -54,11 +62,14 @@ h3 {
   height: fit-content;
   max-height: 100vh;
   overflow: auto;
-}
+} */
+
+/* Hide the scrollbar */
 *::-webkit-scrollbar {
   display: none;
 }
 
+/* Media query for smaller screens */
 @media screen and (max-width: 800px) {
   .page {
     padding: 4rem 0.5rem 7rem 0.5rem;

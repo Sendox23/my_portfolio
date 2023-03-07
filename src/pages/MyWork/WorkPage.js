@@ -1,34 +1,13 @@
-import { useEffect } from "react";
 import Projects from "../../components/MyWork/Projects";
-import { projectList } from "../../components/MyWork/project_list";
-import classes from "./WorkPage.module.css";
+import PageContent from "../../components/Layout/PageContent";
+import { projectList } from "../../resources/project_list";
+
 
 const WorkPage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className={classes.workPage}>
-      <div className={classes.myWork}>
-        <h2>My Work</h2>
-        <ul>
-          {projectList.map((project) => {
-            return (
-              <Projects
-                name={project.name}
-                key={project.id}
-                id={project.id}
-                description={project.description}
-                images={project.images}
-                gitLink={project.gitLink}
-                websiteLink={project.websiteLink}
-              />
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    <PageContent title="My Work">
+      <Projects projectList={projectList} />
+    </PageContent>
   );
 };
 export default WorkPage;

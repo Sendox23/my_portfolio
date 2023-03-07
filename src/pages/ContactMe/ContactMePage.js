@@ -1,17 +1,11 @@
-import { useEffect } from "react";
-
 import ContactMeForm from "../../components/ContactMe/ContactMeForm";
+import PageContent from "../../components/Layout/PageContent";
 
 const ContactMePage = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
-    <div className="page">
-
+    <PageContent title="Contact Me">
       <ContactMeForm />
-    </div>
+    </PageContent>
   );
 };
 export default ContactMePage;

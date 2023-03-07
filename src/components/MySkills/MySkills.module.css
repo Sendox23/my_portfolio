@@ -1,0 +1,28 @@
+
+
+  /* Set styles for the .mySkillsList class */
+  .mySkillsList {
+    padding: 1.5rem 3rem;
+    font-size: 1.25rem;
+    color: white;
+    background: radial-gradient(
+      ellipse at top,
+      var(--dark-gray) 25%,
+      #090a0f 90%
+    );
+    border: 1px solid var(--gold);
+  }
+  
+  /* Set styles for the h3 element inside .mySkillsList */
+  .mySkillsList h3 {
+    padding-top: 1rem;
+    text-align: center;
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 800px) {
+    .mySkillsList {
+      padding: 0.3rem;
+    }
+  }
+  

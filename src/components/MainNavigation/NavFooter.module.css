@@ -23,3 +23,8 @@
   color: #6e5494;
   text-shadow: 2px 2px black;
 }
+@media screen and (min-width: 800px) {
+  .emblemsBox {
+    margin-bottom: 0
+  }
+}

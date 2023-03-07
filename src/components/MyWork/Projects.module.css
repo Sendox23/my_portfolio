@@ -1,35 +1,13 @@
-
-.projectContainer {  
-  padding: 1.5rem 1rem;
-  font-size: 1.25rem;
-  color: white;
-  background: radial-gradient(
-    ellipse at top,
-    var(--dark-gray) 25%,
-    #090a0f 90%
-  );
-  border: 2px solid var(--gold);
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 ;
+.projects ul {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 0.5rem;
 }
 
-.projectLinks {
-  margin-bottom: 1rem;
+@media screen and (max-width: 800px) {
+  .projects ul {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
-
-.projectLinks a {
-  margin: 0 1rem;
-  color: rgb(241, 240, 151);
-}
-.showMoreButton,
-.showLessButton {
-  border: none;
-  background: none;
-  color: rgb(241, 240, 151);
-  font-size: 1rem;
-}
-

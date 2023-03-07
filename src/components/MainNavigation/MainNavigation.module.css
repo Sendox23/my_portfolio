@@ -1,98 +1,138 @@
+/* Styles for the navigation container */
 nav {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
   height: 100%;
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 20%,
+    #090a0f 80%
+  );
+  border-right: 3px solid var(--gold);
   display: flex;
   flex-direction: column;
-  left: 0;
-  top: 0;
-  width: 50%;
-  background: radial-gradient(ellipse at top, var(--dark-gray) 20%, #090a0f 80%);
+  justify-content: center;
+  align-items: center;
   text-align: center;
   z-index: 999;
-  border-right: 3px solid var(--gold);
   transition: transform 0.3s ease-in-out;
-  overflow: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 nav::-webkit-scrollbar {
-  display: none;
+  display: none; /* Hiding scrollbar for the navigation container */
 }
 
+/* Styles for the navigation toggle button */
 .navToggle {
   position: fixed;
-  border: none;
-  background: none;
-  color: white;
-  right: 1rem;
   top: 1rem;
-
-  font-size: 2rem;
+  right: 1rem;
   z-index: 999;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
 }
 
+/* Styles for the logo box */
 .logoBox {
   margin: 2rem 0;
+  padding-left: 1rem;
 }
 
+/* Styles for the logo image */
 .logo {
   min-width: 3rem;
   max-width: 5rem;
-  background-image: radial-gradient(white, var(--gold));
   border-radius: 100%;
+  background-image: radial-gradient(white, var(--gold));
 }
 
-.dividerTop {
-  background-color: var(--gold);
-  height: 0.3rem;
-  width: 80%;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 5rem;
-}
-
+/* Styles for the dividers */
+.dividerTop,
 .dividerBottom {
   background-color: var(--gold);
   height: 0.3rem;
   width: 80%;
+  margin: auto;
+}
+.dividerTop {
+  margin-bottom: 5rem;
+}
+.dividerBottom {
   margin-top: 5rem;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
 }
 
-.link {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding: 0.3rem 1rem;
-}
-
+/* Styles for the navigation links */
+.link,
 .activeLink {
-  background-image: radial-gradient(white, var(--gold));
-  color: black;
   font-size: 1.5rem;
   text-decoration: none;
-
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Semibold", "Helvetica Neue", sans-serif;
   padding: 0.3rem 1rem;
+  color: white;
+  width: 100%;
 }
-
+.activeLink {
+  border-top: 3px solid var(--gold);
+  border-left: 3px solid var(--gold);
+  border-bottom: 3px solid var(--gold);
+}
 .link:hover {
   color: white;
-  background-image: radial-gradient(black, white);
+  border-top: 3px solid var(--light-yellow);
+  border-left: 3px solid var(--light-yellow);
+  border-bottom: 3px solid var(--light-yellow);
 }
 
+/* Styles for the navigation container on screens wider than 800px */
 @media screen and (min-width: 800px) {
   nav {
-    max-width: fit-content;
-    width: 20vw;
+    width: 100%;
+    height: 8vh;
+    max-height: fit-content;
+    flex-direction: row;
+    border-bottom: 1px solid var(--gold);
+    border-right: none;
+  }
+  .logo {
+    max-width: 4rem;
+  }
+  .dividerTop,
+  .dividerBottom {
+    visibility: hidden;
+    width: 0.0001rem;
+    height: 0.0001rem;
+    margin: auto;
+    padding: auto;
   }
   .navToggle {
-    display: none;
+    display: none; /* Hiding navigation toggle button on screens wider than 800px */
+  }
+  .link {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link:hover {
+    color: white;
+    border-top: 2px dashed var(--light-yellow);
+    border-left: 2px dashed var(--light-yellow);
+    border-right: 2px dashed var(--light-yellow);
+    border-bottom: 2px dashed var(--light-yellow);
+  }
+  .activeLink {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed var(--gold);
+    border-left: 2px dashed var(--gold);
+    border-right: 2px dashed var(--gold);
+    border-bottom: 2px dashed var(--gold);
   }
 }

@@ -1,8 +1,11 @@
-.error h3,
-h4 {
+.error h3 {
   color: white;
 
   text-align: center;
   font-family: "Semibold";
-  padding: 6rem 0  ;
+  padding: 10rem 0;
+}
+.error h4 {
+    color: white;
+
 }

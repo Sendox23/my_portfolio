@@ -1,3 +1,4 @@
+/* Styles for the contact form container */
 .contactMeForm form {
   padding: 1.5rem 1rem;
   font-size: 1.5rem;
@@ -8,16 +9,12 @@
     var(--dark-gray) 25%,
     #090a0f 90%
   );
-  border: 3px solid var(--gold);
-  max-width: 600px;
+  border: 1px solid var(--gold);
+  width: 40vw;
   margin: 0 auto;
 }
 
-.contactMeForm h2 {
-  max-width: 600px;
-  margin: 10px auto;
-}
-
+/* Styles for the labels */
 .contactMeForm label {
   display: block;
   margin-bottom: 0.5rem;
@@ -26,6 +23,7 @@
   text-align: left;
 }
 
+/* Styles for the input elements */
 .contactMeForm input[type="text"],
 .contactMeForm input[type="email"],
 .contactMeForm textarea {
@@ -39,11 +37,13 @@
   background-color: #f2f2f2;
 }
 
+/* Styles for the textarea element */
 .contactMeForm textarea {
   height: 150px;
   resize: none;
 }
 
+/* Styles for the submit button */
 .contactMeForm button {
   padding: 1rem;
   background-image: radial-gradient(white, var(--gold));
@@ -56,6 +56,13 @@
   margin-top: 1rem;
 }
 
+/* Styles for the button on hover */
 .contactMeForm button:hover {
   background-image: radial-gradient(black, white);
+}
+
+@media screen and (max-width: 800px) {
+  .contactMeForm form {
+    width: 98vw;
+  }
 }

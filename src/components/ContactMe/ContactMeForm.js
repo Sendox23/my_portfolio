@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import classes from "./ContactMeForm.module.css";
 
 const ContactMeForm = () => {
+  let navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,11 +18,12 @@ const ContactMeForm = () => {
     });
   };
 
-  let navigate = useNavigate();
   const submitHandler = (e) => {
     e.preventDefault();
+    // Get form data from DOM
     let myForm = document.getElementById("contact");
     let formData = new FormData(myForm);
+    // Send form data to Netlify Forms API
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -32,15 +35,16 @@ const ContactMeForm = () => {
 
   return (
     <div className={classes.contactMeForm}>
-      <h2>Contact</h2>
       <form
         onSubmit={submitHandler}
         data-netlify="true"
         name="contact"
         method="post"
-    id="contact"
+        id="contact"
       >
+        {/* Add a hidden input field with name set to 'form-name' and value set to the form name  **necessary for netlify** */}
         <input type="hidden" name="form-name" value="contact" />
+
         <div>
           <label htmlFor="name">
             Name:
@@ -67,6 +71,7 @@ const ContactMeForm = () => {
             />
           </label>
         </div>
+
         <div>
           <label htmlFor="message">
             Message:
@@ -80,6 +85,7 @@ const ContactMeForm = () => {
             />
           </label>
         </div>
+
         <button type="submit">Submit</button>
       </form>
     </div>

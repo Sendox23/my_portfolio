@@ -1,0 +1,76 @@
+
+  /* Set styles for the .selfImage class */
+  .selfImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  /* Set styles for the img element inside .selfImage */
+  .selfImage img {
+    width: 20rem;
+    height: auto;
+    max-height: 100%;
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    padding: 1rem 1rem 0 1rem;
+    background: radial-gradient(
+      ellipse at bottom,
+      var(--dark-gray) 40%,
+      var(--ultra-dark-blue) 70%
+    );
+  }
+  
+  /* Set styles for the .nameBanner class */
+  .nameBanner {
+    text-align: center;
+  }
+  
+  /* Set styles for the span element inside .nameBanner */
+  .nameBanner span {
+    font-size: 4.5rem;
+    color: var(--gold);
+    text-shadow: 3px 3px white;
+    box-sizing: border-box;
+  }
+  
+  /* Set styles for the h4 element inside .nameBanner */
+  .nameBanner h4 {
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px var(--gold);
+    padding-top: 3rem;
+  }
+  
+  /* Set styles for the .aaron class before pseudo-element */
+  .aaron::before {
+    content: "A.";
+    display: inline-block;
+    color: white;
+    text-shadow: 3px 3px var(--gold);
+  }
+  
+  /* Set hover styles for the .aaron class before pseudo-element */
+  .aaron:hover::before {
+    content: "Aaron";
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 800px) {
+    .selfImage {
+      margin-bottom: 1.5rem;
+    }
+    .selfImage img {
+      max-width: 17.5rem;
+      width: 15rem;
+    }
+  
+    .nameBanner span {
+      font-size: 4.5rem;
+    }
+    .nameBanner h4 {
+      font-size: 1.5rem;
+      padding-top: 2rem;
+    }
+  }
