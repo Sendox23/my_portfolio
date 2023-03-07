@@ -12,6 +12,7 @@
   border: 1px solid var(--gold);
   width: 40vw;
   margin: 0 auto;
+  min-width: fit-content;
 }
 
 /* Styles for the labels */
@@ -63,6 +64,6 @@
 
 @media screen and (max-width: 800px) {
   .contactMeForm form {
-    width: 98vw;
+    width: 96vw;
   }
 }
