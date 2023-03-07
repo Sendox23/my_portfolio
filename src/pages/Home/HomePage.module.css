@@ -1,27 +1,27 @@
 .homePage {
-  padding-bottom: 3rem;
-
-}
-.nameBanner {
-  padding-top: 3rem;
-  text-align: center;
-}
-.nameBanner span {
-  padding: 0.8rem;
-  box-sizing: border-box;
-  line-height: 10rem;
-
   font-family: "Semibold";
+  padding: 6rem 5% 0 15%;
+  height: fit-content;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.nameBanner {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.nameBanner span {
+  font-size: 5rem;
+  line-height: 1.2;
   color: var(--gold);
   text-shadow: 3px 3px white;
-  font-size: 6rem;
+  box-sizing: border-box;
 }
 
 .nameBanner h4 {
   color: white;
   font-size: 2rem;
-
-  padding-top: 5rem;
   text-shadow: 1px 1px var(--gold);
 }
 
@@ -34,7 +34,13 @@
 
 .aaron:hover::before {
   content: "Aaron";
-  color: white;
+}
+
+.selfImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .selfImage img {
@@ -43,28 +49,30 @@
   max-height: 100%;
   border: 3px solid var(--gold);
   border-radius: 50%;
-  right: 5%;
-  top: 5%;
-  position: absolute;
   padding: 1rem 1rem 0 1rem;
-
   background-color: var(--dark-gray);
 }
 
 @media screen and (max-width: 800px) {
-  .selfImage {
-    text-align: center;
-    padding-top: 3rem;
+  .homePage {
+    padding: 3rem 0.5rem 5rem;
+    overflow: auto;
   }
-  .selfImage img {
-    top: 0;
-    right: 0;
-    position: relative;
-    right: 0;
-    
+  
+  .nameBanner {
+    margin: 1rem 0 2rem;
+  }
+
+  .selfImage {
+    margin-bottom: 1.5rem;
+  }
+
+  .nameBanner h4 {
+    font-size: 1.5rem;
   }
 
   .nameBanner span {
-    line-height: 7rem;
+    font-size: 3rem;
+    line-height: 1.1;
   }
 }
