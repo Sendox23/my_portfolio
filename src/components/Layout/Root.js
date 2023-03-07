@@ -13,7 +13,6 @@ const RootLayout = () => {
         {navigation.state === "loading" && <p>Loading.....</p>}
         <Outlet />
       </main>
-<footer>© 2023 A. David Marshall</footer>
     </div>
   );
 };
