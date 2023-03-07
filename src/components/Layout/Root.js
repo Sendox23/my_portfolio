@@ -9,11 +9,11 @@ const RootLayout = () => {
     <div className={classes.layout}>
       <Background />
       <MainNavigation />
-
       <main>
         {navigation.state === "loading" && <p>Loading.....</p>}
         <Outlet />
       </main>
+<footer>© 2023 A. David Marshall</footer>
     </div>
   );
 };
