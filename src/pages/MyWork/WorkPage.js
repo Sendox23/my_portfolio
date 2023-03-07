@@ -9,7 +9,7 @@ const WorkPage = () => {
   }, []);
 
   return (
-    <div className="page">
+    <div className={classes.workPage}>
       <div className={classes.myWork}>
         <h2>My Work</h2>
         <ul>
