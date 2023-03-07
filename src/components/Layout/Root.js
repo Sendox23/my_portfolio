@@ -1,5 +1,5 @@
 import MainNavigation from "../MainNavigation/MainNavigation";
-import classes from "./Root.module.css";
+
 import { Outlet, useNavigation } from "react-router-dom";
 import Background from "../UI/Background";
 
