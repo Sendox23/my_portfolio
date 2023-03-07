@@ -1,9 +1,14 @@
 .aboutMePage {
   font-family: "Semibold";
-  margin: 6rem 0 0 25%;
+  padding: 6rem 5% 0 15%;
   text-align: center;
-  width: 60%;
+  width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  max-height: 100vh;
+  overflow: scroll;
 }
+
 .aboutMe {
   padding: 1.5rem 1rem;
   background-color: var(--dark-gray);
@@ -17,7 +22,8 @@
 
 @media screen and (max-width: 800px) {
   .aboutMePage {
-    width: 95%;
-    margin: 6rem auto;
+    padding: 5rem .5rem .5rem;
+    margin: 0 auto;
+    overflow: scroll;
   }
 }

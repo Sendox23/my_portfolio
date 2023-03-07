@@ -1,5 +1,8 @@
 
-
+#background {
+    z-index: -100;
+    position: fixed;
+}
   #stars {
     width: 1px;
     height: 1px;
