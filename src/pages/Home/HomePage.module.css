@@ -1,5 +1,32 @@
+.homePage {
+  padding-top: 6vh;
+  font-family: "Semibold";
+}
+
+.selfImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+
+.selfImage img {
+  width: 22.5rem;
+  height: auto;
+  max-height: 100%;
+  border: 3px solid var(--gold);
+  border-radius: 50%;
+  padding: 1rem 1rem 0 1rem;
+  background: radial-gradient(
+    ellipse at bottom,
+    var(--dark-gray) 40%,
+    var(--ultra-dark-blue) 70%
+  );
+}
+
 .nameBanner {
   text-align: center;
+
 }
 
 .nameBanner span {
@@ -25,23 +52,6 @@
 
 .aaron:hover::before {
   content: "Aaron";
-}
-
-.selfImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.selfImage img {
-  width: 22.5rem;
-  height: auto;
-  max-height: 100%;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
-  padding: 1rem 1rem 0 1rem;
-  background: radial-gradient(ellipse at bottom, var(--dark-gray) 40%, var(--ultra-dark-blue) 70%);
 }
 
 @media screen and (max-width: 800px) {
