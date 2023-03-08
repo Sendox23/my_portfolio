@@ -1,9 +1,8 @@
 .carouselContainer {
-  max-width: 90%;
+  max-width: 1200px;
   height: 100%;
-  margin-bottom: 3rem;
-
-
+  width: 90%;
+  margin: auto auto 3rem;
 }
 
 .carousel img {

@@ -1,7 +1,25 @@
 .projectDetails {
-    max-width: 1500px;
-    height: auto;
-    overflow: auto;
-    margin: auto;
-    padding: auto;
+  max-width: 1200px;
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.projectDetails img {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.projectDetails p {
+  color: white;
+  text-align: center;
+}
+
+.projectLinks {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.projectLinks a {
+  font-size: 26px;
+  color: var(--light-yellow);
+  text-decoration: none;
 }

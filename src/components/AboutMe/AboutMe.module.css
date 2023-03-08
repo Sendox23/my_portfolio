@@ -8,6 +8,7 @@
   border: 1px solid var(--gold);
   text-align: center;
   max-width: 1600px;
+  margin: 0 auto;
 }
 
 .aboutMe p {

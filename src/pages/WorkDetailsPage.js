@@ -1,11 +1,18 @@
-import PageContent from "../components/Layout/PageContent";
+import { Fragment } from "react";
+import { useLocation } from "react-router-dom";
+
+import Projects from "../components/MyWork/Projects";
 import WorkDetails from "../components/MyWork/WorkDetails";
+import { projectList } from "../resources/project_list";
 
 const WorkDetailsPage = () => {
+  let { state } = useLocation();
+
   return (
-    <PageContent>
-      <WorkDetails />
-    </PageContent>
+    <Fragment>
+      <WorkDetails state={state}  isDetailPage="More Projects..." />
+      <Projects projectList={projectList}/>
+    </Fragment>
   );
 };
 export default WorkDetailsPage;

@@ -57,4 +57,28 @@ export const projectList = [
     gitLink: "https://github.com/Sendox23/React-Meetups",
     websiteLink: "https://react-meetups-project5.netlify.app/",
   },
+  {
+    name: "Test 1",
+    id: "p5",
+    description: "",
+    images: [],
+    gitLink: "",
+    websiteLink: "",
+  },
+  {
+    name: "Test 2",
+    id: "p6",
+    description: "",
+    images: [],
+    gitLink: "",
+    websiteLink: "",
+  },
+  {
+    name: "Test 3",
+    id: "p7",
+    description: "",
+    images: [],
+    gitLink: "",
+    websiteLink: "",
+  },
 ];

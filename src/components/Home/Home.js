@@ -22,7 +22,7 @@ const Home = () => {
         <h3>
           <span className={classes.marshall}>Marshall</span>
         </h3>
-        <h4>Front-End Web Developer</h4>
+        <h4><i>Front-End Web Developer</i></h4>
       </div>
     </Fragment>
   );

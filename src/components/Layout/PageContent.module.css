@@ -1,15 +1,11 @@
 .content {
-  font-family: "Semibold";
-  padding: 15vh 2vh 5vh;
+  padding: 15vh 0 5vh;
   margin: 0 auto;
   min-width: fit-content;
-  width: fit-content;
-  height: fit-content;
-  max-height: 100vh;
+  max-width: 100vw;
   overflow: auto;
+
 }
-
-
 
 @media screen and (max-width: 800px) {
   .content {
@@ -17,10 +13,7 @@
     margin: 0 auto;
     overflow: scroll;
     width: 98vw;
-    display: block; /* Added */
   }
 
-  .title {
-    margin-right: 0; /* Added */
-  }
+
 }

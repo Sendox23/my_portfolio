@@ -12,6 +12,9 @@
     align-items: center;
     justify-content: center;
     margin: 0;
+    min-width: 100%;
+
+    height: auto;
   }
   .projectContainer p {
     text-align: center;
@@ -21,9 +24,10 @@
     margin-bottom: 1rem;
   }
   
-  .projectLinks a {
+  .projectContainer a {
     margin: 0 1rem;
     color: var(--light-yellow);
+    text-decoration: none;
   }
   
   /* Styles for the "Read More" and "Read Less" buttons */
