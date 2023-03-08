@@ -5,13 +5,16 @@ export const sliderSettings = {
   ) => (
     <div
       style={{
-        background: "radial-gradient(white, var(--gold))",
+        background: "white",
         maxHeight: "2rem",
         position: "absolute", // add this to position the dot bar relative to the carousel container
         bottom: "-.8rem", // add this to position the dot bar at the bottom of the carousel container
         left: "50%", // add this to center the dot bar horizontally
         transform: "translateX(-50%)", // add this to center the dot bar horizontally
-        border: "1px solid transparent",
+        borderLeft: "1px solid white",
+        borderRight: "1px solid white",
+        borderBottom: "1px solid white",
+        borderTop: "1px solid white",
       }}
     >
       <ul

@@ -10,7 +10,7 @@ const WorkDetailsPage = () => {
 
   return (
     <Fragment>
-      <WorkDetails state={state}  isDetailPage="More Projects..." />
+      <WorkDetails state={state}  title="More Projects..." />
       <Projects projectList={projectList}/>
     </Fragment>
   );
