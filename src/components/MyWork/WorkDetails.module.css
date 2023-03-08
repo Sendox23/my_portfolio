@@ -12,6 +12,7 @@
 .projectDetails p {
   color: white;
   text-align: center;
+  font-size: 20px;
 }
 
 .projectLinks {
@@ -21,5 +22,6 @@
 .projectLinks a {
   font-size: 26px;
   color: var(--light-yellow);
-  text-decoration: none;
+
+  padding: 5rem;
 }

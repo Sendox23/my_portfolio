@@ -19,7 +19,7 @@ const WorkDetails = ({ state }) => {
           {state.websiteLink && (
             <Fragment>
               <a href={state.websiteLink} target="_blank" rel="noreferrer">
-                Website
+                View Website
               </a>
             </Fragment>
           )}
