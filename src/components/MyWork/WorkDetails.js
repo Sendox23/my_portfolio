@@ -35,9 +35,9 @@ const WorkDetails = ({ state, title }) => {
   }
   return (
     <PageContent title={state.name}>
-      <div className={classes.projectDetails}>
+      <div className={classes.workDetails}>
         <SlickCarousel images={state.images} />{" "}
-        <div className={classes.projectLinks}>
+        <div className={classes.workLinks}>
           <h3>View on</h3>
           {state.gitLink && (
   

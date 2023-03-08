@@ -1,5 +1,5 @@
-/* Styles for the container of each project */
-.projectContainer {
+/* Styles for the container of each work */
+.workContainer {
     padding: 1.5rem 1rem;
     font-size: 1.25rem;
     color: white;
@@ -16,15 +16,15 @@
 
     height: auto;
   }
-  .projectContainer p {
+  .workContainer p {
     text-align: center;
   }
-  /* Styles for the project links */
-  .projectLinks {
+  /* Styles for the work links */
+  .workLinks {
     margin-bottom: 1rem;
   }
   
-  .projectContainer a {
+  .workContainer a {
     margin: 0 1rem;
     color: var(--light-yellow);
  

@@ -8,7 +8,7 @@ import reactFoodDelivery from "./images/food-project.png";
 import reactFoodDelivery2 from "./images/food-project-2.png";
 import reactFoodDelivery3 from "./images/food-project-3.png";
 import reactFoodDelivery4 from "./images/food-project-4.png";
-export const projectList = [
+export const workList = [
   {
     name: "Spotify Playlist",
     id: "p1",
