@@ -76,13 +76,13 @@ nav::-webkit-scrollbar {
 }
 .activeLink {
   border-top: 3px solid var(--gold);
-  border-left: 3px solid var(--gold);
+
   border-bottom: 3px solid var(--gold);
 }
 .link:hover {
   color: white;
   border-top: 3px solid var(--light-yellow);
-  border-left: 3px solid var(--light-yellow);
+
   border-bottom: 3px solid var(--light-yellow);
 }
 

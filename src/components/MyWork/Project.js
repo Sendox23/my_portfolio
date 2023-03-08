@@ -2,15 +2,14 @@ import { useState } from "react";
 import SlickCarousel from "./SlickCarousel";
 
 import classes from "./Project.module.css";
+import { Link } from "react-router-dom";
 
 const Project = ({ name, id, description, images, gitLink, websiteLink }) => {
-
   const [showFullDescription, setShowFullDescription] = useState(false);
 
   let readMoreButton = null;
   let showLessButton = null;
   const longDescription = description;
-
 
   if (description.length > 150 && !showFullDescription) {
     description = description.substring(0, 150);
@@ -22,7 +21,6 @@ const Project = ({ name, id, description, images, gitLink, websiteLink }) => {
         ...Read More
       </button>
     );
-
   } else if (description.length > 150 && showFullDescription) {
     description = longDescription;
     showLessButton = (
@@ -49,6 +47,12 @@ const Project = ({ name, id, description, images, gitLink, websiteLink }) => {
             Website
           </a>
         )}
+        <Link
+          to={id}
+          state={{ name, id, description, images, gitLink, websiteLink }}
+        >
+          View More Details
+        </Link>
       </div>
       <SlickCarousel images={images} />
       <p>{description}</p> {readMoreButton}

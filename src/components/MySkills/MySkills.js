@@ -25,7 +25,7 @@ const MySkills = () => {
           Familiarity with database management systems such as MongoDB and MySQL
         </li>
       </ul>
-      <h3>DevOps</h3>
+      <h3>Developer Operations</h3>
       <ul>
         <li>Proficient in Git and version control</li>
         <li>

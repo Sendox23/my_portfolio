@@ -1,14 +1,11 @@
-import { useParams,  } from "react-router-dom";
-import Slider from "react-slick";
+import PageContent from "../components/Layout/PageContent";
+import WorkDetails from "../components/MyWork/WorkDetails";
 
-const WorkDetailsPage = (props) => {
-
-  const params = useParams();
-
+const WorkDetailsPage = () => {
   return (
-    <div className="page">
-      <Slider />
-    </div>
+    <PageContent>
+      <WorkDetails />
+    </PageContent>
   );
 };
 export default WorkDetailsPage;

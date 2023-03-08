@@ -11,9 +11,7 @@ export const sliderSettings = {
         bottom: "-.8rem", // add this to position the dot bar at the bottom of the carousel container
         left: "50%", // add this to center the dot bar horizontally
         transform: "translateX(-50%)", // add this to center the dot bar horizontally
-        borderLeft: "1px solid black",
-        borderRight: "1px solid black",
-        borderBottom: "1px solid black",
+        border: "1px solid transparent",
       }}
     >
       <ul
@@ -23,6 +21,7 @@ export const sliderSettings = {
           justifyContent: "center", // add this to center the dots horizontally
           alignItems: "center", // add this to center the dots vertically
           height: "100%",
+          maxHeight: "100%",
         }}
       >
         {dots}
