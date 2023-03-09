@@ -1,4 +1,3 @@
-import SlickCarousel from "./SlickCarousel";
 
 import classes from "./Work.module.css";
 import { Link } from "react-router-dom";
