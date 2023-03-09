@@ -1,5 +1,6 @@
 import reactMeetup from "./images/react-meetups-project.png";
 import reactMeetup2 from "./images/react-meetups-project-2.png";
+import reactMeetup3 from "./images/react-meetups-project-3.png";
 import spotifyPlaylist from "./images/jamming-project.png";
 import spotifyPlaylist2 from "./images/jamming-project-2.png";
 import spotifyPlaylist3 from "./images/jamming-project-3.png";
@@ -8,6 +9,8 @@ import reactFoodDelivery from "./images/food-project.png";
 import reactFoodDelivery2 from "./images/food-project-2.png";
 import reactFoodDelivery3 from "./images/food-project-3.png";
 import reactFoodDelivery4 from "./images/food-project-4.png";
+import exampleProject from "./images/example-project.png";
+import exampleProject2 from "./images/example-project-2.png";
 export const workList = [
   {
     name: "Spotify Playlist",
@@ -24,16 +27,8 @@ export const workList = [
     websiteLink: "",
   },
   {
-    name: "Fantasy Football",
-    id: "p2",
-    description: "",
-    images: [],
-    gitLink: "",
-    websiteLink: "",
-  },
-  {
     name: "Food Order App",
-    id: "p3",
+    id: "p2",
     description:
       " This is a web-based application that allows users to order meals from a menu of options. The app is designed for restaurants or food delivery businesses to streamline their order management process. Users can browse a menu of available meals, select the items they want to order, and submit their order for processing. The app features a modern, user-friendly design that is easy to navigate. It is built using React and styled with CSS, and features responsive design that works on desktop and mobile devices. The app uses a serverless backend built with Firebase, allowing for quick and efficient order processing. With this app, restaurants or food delivery businesses can easily manage their orders and improve their customer service. The app allows users to customize their orders, including special requests or dietary restrictions. The app also features a real-time order status system, allowing users to track the progress of their order from preparation to delivery.",
     images: [
@@ -47,37 +42,25 @@ export const workList = [
   },
   {
     name: "React Meetups",
-    id: "p4",
+    id: "p3",
     description:
       "This is a web-based application that allows users to browse and register for local meetups. The app is built using React and styled with CSS, and features a responsive design that works on desktop and mobile devices. Users can search for meetups by location, category, or keyword, and the app will display relevant results. The app features a clean, modern design that is both visually appealing and user-friendly. It uses the Google Maps API to display the location of each meetup, and allows users to RSVP for events and share them on social media. The app uses a serverless backend built with Firebase, allowing for quick and efficient data storage and retrieval. With this app, users can connect with like-minded individuals and attend events in their local area. The app provides a platform for organizers to create and promote their events, and allows attendees to RSVP and stay up-to-date on upcoming meetups. The app also features a feedback system, allowing users to rate and review meetups they have attended.",
     images: [
       { url: reactMeetup, alt: "meetup-1" },
       { url: reactMeetup2, alt: " meetup-2" },
+      { url: reactMeetup3, alt: " meetup-3" },
     ],
     gitLink: "https://github.com/Sendox23/React-Meetups",
     websiteLink: "https://react-meetups-project5.netlify.app/",
   },
   {
-    name: "Test 1",
-    id: "p5",
-    description: "",
-    images: [],
-    gitLink: "",
-    websiteLink: "",
-  },
-  {
-    name: "Test 2",
-    id: "p6",
-    description: "",
-    images: [],
-    gitLink: "",
-    websiteLink: "",
-  },
-  {
-    name: "Test 3",
-    id: "p7",
-    description: "",
-    images: [],
+    name: "Your New Website",
+    id: "p4",
+    description: "This could be your website!",
+    images: [
+      { url: exampleProject, alt: "example-1" },
+      { url: exampleProject2, alt: "example-2" },
+    ],
     gitLink: "",
     websiteLink: "",
   },

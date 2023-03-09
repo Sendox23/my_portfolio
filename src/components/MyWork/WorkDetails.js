@@ -43,24 +43,26 @@ const WorkDetails = ({ state, title }) => {
       <div className={classes.divBox}>
         <div className={classes.workDetails}>
           <SlickCarousel images={state.images} />
-          <div className={classes.workLinks}>
-            <div className={classes.divBarGold}></div>
-            <h3>View on</h3>
-            {state.gitLink && (
-              <a href={state.gitLink} target="_blank" rel="noreferrer">
-                GitHub
-              </a>
-            )}
-            {state.websiteLink && (
-              <a href={state.websiteLink} target="_blank" rel="noreferrer">
-                Website
-              </a>
-            )}
-            <div className={classes.divBarGold}></div>
-            <div className={classes.description}>
-              <p>{description}</p> {readMoreButton}
-              {showLessButton}
+          {state.gitLink || state.websiteLink ? (
+            <div className={classes.workLinks}>
+              <div className={classes.divBarGold}></div>
+              <h3>View on</h3>
+              {state.gitLink && (
+                <a href={state.gitLink} target="_blank" rel="noreferrer">
+                  GitHub
+                </a>
+              )}
+              {state.websiteLink && (
+                <a href={state.websiteLink} target="_blank" rel="noreferrer">
+                  Website
+                </a>
+              )}
+              <div className={classes.divBarGold}></div>
             </div>
+          ) : null}
+          <div className={classes.description}>
+            <p>{description}</p> {readMoreButton}
+            {showLessButton}
           </div>
         </div>
         <div className={classes.divBarBlue}></div>

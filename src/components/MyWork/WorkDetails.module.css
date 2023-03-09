@@ -2,7 +2,7 @@
   max-width: 1200px;
   width: 85vw;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding: 3rem 2rem;
   background: radial-gradient(
     ellipse at top,
     var(--dark-gray) 25%,
@@ -14,7 +14,6 @@
 .workDetails img {
   max-width: 1200px;
   width: 100%;
-
 }
 
 .workLinks {
@@ -26,9 +25,16 @@
   color: var(--light-yellow);
   padding: 2rem;
 }
+.workLinks a:hover {
+  color: var(--mustard-yellow);
+}
+
+.description {
+  text-align: center;
+}
 .description p {
   color: white;
-  text-align: center;
+
   font-size: 20px;
   padding-top: 0.5rem;
 }
@@ -36,6 +42,10 @@
   color: var(--light-yellow);
   background-color: transparent;
   border: none;
+}
+
+.description button:hover {
+  color: var(--mustard-yellow);
 }
 .divBarGold {
   width: 35vw;

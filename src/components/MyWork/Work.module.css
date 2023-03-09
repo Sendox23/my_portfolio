@@ -1,44 +1,49 @@
 /* Styles for the container of each work */
 .workContainer {
-    padding: 1.5rem 1rem;
-    font-size: 1.25rem;
-    color: white;
-    /* Create a radial gradient background */
-    background: radial-gradient(ellipse at top, var(--dark-gray) 25%, #090a0f 90%);
-    border: 1px solid var(--gold);
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    min-width: 100%;
+  padding: 1.5rem 1rem;
+  font-size: 1.25rem;
+  color: white;
+  /* Create a radial gradient background */
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 25%,
+    #090a0f 90%
+  );
+  border: 1px solid var(--gold);
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  min-width: 100%;
 
-    height: auto;
-  }
-  .workContainer img {
-    max-width: 100%;
-    padding: 1rem;
-  }
-  .workContainer p {
-    text-align: center;
-  }
-  /* Styles for the work links */
-  .workLinks {
-    margin-bottom: 1rem;
-  }
-  
-  .workContainer a {
-    margin: 0 1rem;
-    color: var(--light-yellow);
- 
-  }
-  
-  /* Styles for the "Read More" and "Read Less" buttons */
-  .showMoreButton,
-  .showLessButton {
-    border: none;
-    background: none;
-    color: rgb(241, 240, 151);
-    font-size: 1rem;
-  }
+  height: auto;
+}
+.workContainer img {
+  max-width: 100%;
+  padding: 1rem;
+}
+.workContainer p {
+  text-align: center;
+}
+/* Styles for the work links */
+.workLinks {
+  margin-bottom: 1rem;
+}
+
+.workContainer a {
+  margin: 0 1rem;
+  color: var(--light-yellow);
+}
+.workContainer a:hover {
+  color: var(--mustard-yellow);
+}
+/* Styles for the "Read More" and "Read Less" buttons */
+.showMoreButton,
+.showLessButton {
+  border: none;
+  background: none;
+  color: rgb(241, 240, 151);
+  font-size: 1rem;
+}
