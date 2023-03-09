@@ -1,7 +1,7 @@
 import Work from "./Work";
 import classes from "./AllWork.module.css";
 
-const Works = ({ workList }) => {
+const AllWork = ({ workList }) => {
   const mappedWorks = workList.map((work) => {
     return (
       <Work
@@ -17,9 +17,9 @@ const Works = ({ workList }) => {
   });
 
   return (
-    <div className={classes.works}>
+    <div className={classes.allWork}>
       <ul>{mappedWorks}</ul>
     </div>
   );
 };
-export default Works;
+export default AllWork;

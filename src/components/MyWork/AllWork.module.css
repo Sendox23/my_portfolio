@@ -1,4 +1,8 @@
-.works ul {
+.allWork {
+  padding-bottom: 3rem;
+}
+
+.allWork ul {
   margin: 0;
   padding: 0;
   display: grid;
@@ -8,7 +12,7 @@
 }
 
 @media screen and (max-width: 800px) {
-  .works ul {
+  .allWork ul {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
