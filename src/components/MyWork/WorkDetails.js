@@ -35,30 +35,28 @@ const WorkDetails = ({ state, title }) => {
   }
   return (
     <PageContent title={state.name}>
-      <div className={classes.workDetails}>
-        <SlickCarousel images={state.images} />{" "}
-        <div className={classes.workLinks}>
-          <h3>View on</h3>
-          {state.gitLink && (
-  
+      <div className={classes.divBox}>
+        <div className={classes.workDetails}>
+          <SlickCarousel images={state.images} />{" "}
+          <div className={classes.workLinks}>
+            <h3>View on</h3>
+            {state.gitLink && (
               <a href={state.gitLink} target="_blank" rel="noreferrer">
                 GitHub
               </a>
- 
-          )}
-          {state.websiteLink && (
- 
+            )}
+            {state.websiteLink && (
               <a href={state.websiteLink} target="_blank" rel="noreferrer">
                 Website
               </a>
-      
-          )}
-          <div className={classes.description}>
-            <p>{description}</p> {readMoreButton}
-            {showLessButton}
+            )}
+            <div className={classes.description}>
+              <p>{description}</p> {readMoreButton}
+              {showLessButton}
+            </div>
           </div>
-          <div className={classes.divBar}></div>
         </div>
+        <div className={classes.divBar}></div>
         <h1>{title}</h1>
       </div>
     </PageContent>

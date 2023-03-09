@@ -16,6 +16,10 @@
 
     height: auto;
   }
+  .workContainer img {
+    max-width: 100%;
+    padding: 1rem;
+  }
   .workContainer p {
     text-align: center;
   }

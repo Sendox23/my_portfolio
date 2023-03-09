@@ -6,7 +6,9 @@
   overflow: auto;
 
 }
-
+.title {
+  padding-bottom: 3rem;
+}
 @media screen and (max-width: 800px) {
   .content {
     padding: 4rem 0.5rem 1rem 0.5rem;

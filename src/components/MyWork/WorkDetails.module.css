@@ -2,10 +2,15 @@
   max-width: 1200px;
   width: 85vw;
   margin: 0 auto;
+  padding-top: 1rem;
+  background: radial-gradient(
+    ellipse at top,
+    var(--dark-gray) 25%,
+    #090a0f 90%
+  );
+  border: 1px solid var(--gold);
 }
-.workDetails h1 {
-  padding: 1rem 0;
-}
+
 .workDetails img {
   max-width: 1200px;
   width: 100%;
@@ -33,8 +38,16 @@
 }
 
 .divBar {
-  width: 100%;
+  width: 50vw;
   background-color: var(--ultra-dark-blue);
   height: 0.5rem;
-  margin: 1rem 0;
+  margin: 4rem auto 2rem;
+  
+}
+
+
+@media screen and (max-width: 800px) {
+.divBar {
+  width: 60vw
+}
 }
