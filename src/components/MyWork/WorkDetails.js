@@ -12,23 +12,28 @@ const WorkDetails = ({ state, title }) => {
   let showLessButton = null;
   const longDescription = description;
 
+  const handleShowLess = () => {
+    const header = document.querySelector("h1");
+    header.scrollIntoView({ behavior: "smooth" });
+    setShowFullDescription(false);
+  };
+
+  const handleShowMore = () => {
+    const header = document.querySelector("h3");
+    header.scrollIntoView({ behavior: "smooth" });
+    setShowFullDescription(true);
+  };
   if (description.length > 150 && !showFullDescription) {
     description = description.substring(0, 150);
     readMoreButton = (
-      <button
-        className={classes.showMoreButton}
-        onClick={() => setShowFullDescription(true)}
-      >
+      <button className={classes.showMoreButton} onClick={handleShowMore}>
         ...Read More
       </button>
     );
   } else if (description.length > 150 && showFullDescription) {
     description = longDescription;
     showLessButton = (
-      <button
-        className={classes.showLessButton}
-        onClick={() => setShowFullDescription(false)}
-      >
+      <button className={classes.showLessButton} onClick={handleShowLess}>
         Read Less
       </button>
     );
@@ -37,8 +42,9 @@ const WorkDetails = ({ state, title }) => {
     <PageContent title={state.name}>
       <div className={classes.divBox}>
         <div className={classes.workDetails}>
-          <SlickCarousel images={state.images} />{" "}
+          <SlickCarousel images={state.images} />
           <div className={classes.workLinks}>
+            <div className={classes.divBarGold}></div>
             <h3>View on</h3>
             {state.gitLink && (
               <a href={state.gitLink} target="_blank" rel="noreferrer">
@@ -50,13 +56,14 @@ const WorkDetails = ({ state, title }) => {
                 Website
               </a>
             )}
+            <div className={classes.divBarGold}></div>
             <div className={classes.description}>
               <p>{description}</p> {readMoreButton}
               {showLessButton}
             </div>
           </div>
         </div>
-        <div className={classes.divBar}></div>
+        <div className={classes.divBarBlue}></div>
         <h1>{title}</h1>
       </div>
     </PageContent>

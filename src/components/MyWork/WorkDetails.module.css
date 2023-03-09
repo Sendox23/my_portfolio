@@ -14,6 +14,7 @@
 .workDetails img {
   max-width: 1200px;
   width: 100%;
+
 }
 
 .workLinks {
@@ -36,18 +37,21 @@
   background-color: transparent;
   border: none;
 }
-
-.divBar {
+.divBarGold {
+  width: 35vw;
+  background-color: var(--gold);
+  height: 0.15rem;
+  margin: 2rem auto;
+}
+.divBarBlue {
   width: 50vw;
   background-color: var(--ultra-dark-blue);
   height: 0.5rem;
   margin: 4rem auto 2rem;
-  
 }
-
 
 @media screen and (max-width: 800px) {
-.divBar {
-  width: 60vw
-}
+  .divBar {
+    width: 60vw;
+  }
 }

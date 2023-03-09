@@ -63,19 +63,39 @@ const MainNavigation = () => {
 
         {/* Navigation links */}
         <hr className={classes.dividerTop} />
-        <NavLink className={activeClassHandler} to="/home">
+        <NavLink
+          className={activeClassHandler}
+          to="/home"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Home
         </NavLink>
-        <NavLink className={activeClassHandler} to="/my-work">
+        <NavLink
+          className={activeClassHandler}
+          to="/my-work"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           My Work
         </NavLink>
-        <NavLink className={activeClassHandler} to="/about-me">
+        <NavLink
+          className={activeClassHandler}
+          to="/about-me"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           About Me
         </NavLink>
-        <NavLink className={activeClassHandler} to="/my-skills">
+        <NavLink
+          className={activeClassHandler}
+          to="/my-skills"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           My Skills
         </NavLink>
-        <NavLink className={activeClassHandler} to="/contact-me">
+        <NavLink
+          className={activeClassHandler}
+          to="/contact-me"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           Contact Me
         </NavLink>
         <hr className={classes.dividerBottom} />
