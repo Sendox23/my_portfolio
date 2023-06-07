@@ -10,7 +10,7 @@ const NavFooter = () => {
             {/* LinkedIn emblem */}
             <a
               className={classes.linkedin}
-              href="https://www.linkedin.com/in/a-david-marshall-2b4b191b9/"
+              href="https://www.linkedin.com/in/david-marshall-2b4b191b9/"
               target="_blank"
               rel="noreferrer"
             >
